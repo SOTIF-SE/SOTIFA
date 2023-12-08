@@ -1,0 +1,403 @@
+run time：200s
+memory：2701016Byte
+systemScore System evaluation--0.9898913868931514
+	L1 Loss of life or personal injury--0.9886555518016799
+		H5 adherence to best practices--0.99049078155
+			H5.1 violate two-second rule--0.99049078155
+				UCA143 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=wet water and low temperature& see>150 and see<200& p=[0.01,0.03]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9909060783
+				UCA144 EnvcontentCACC==1 & not provide & decelerate & when road=highway without a centerline& weather=water snow and frost& see<50& p=[0.06,0.1]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9913864876
+				UCA130 EnvcontentCACC==1 & provide & accelerate & when road=highway 1 lane same direction& weather=wet small amount of water and low temperature& see>=50 and see<150& p=[0.03,0.06]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9903350048
+				UCA140 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=sunny and dry& see<50& p=[0.01,0.03]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9901945959
+				UCA145 EnvcontentCACC==1 & not provide & decelerate & when road=urban road without a centerline& weather=freezing& see>=200& p=[0.03,0.06]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9917805789
+				UCA135 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9917196227
+				UCA133 EnvcontentCACC==1 & provide & accelerate & when road=urban road without a centerline& weather=freezing& see>=200& p=[0.03,0.06]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9896903044
+				UCA131 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=wet water and low temperature& see>150 and see<200& p=[0.01,0.03]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9894875122
+				UCA137 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=wet water and low temperature& see>150 and see<200& p=[0.01,0.03]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9893514196
+				UCA146 EnvcontentCACC==1 & not provide & decelerate & when road=expressway& weather=sunny and dry& see<50& p=[0.01,0.03]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9904460378
+				UCA138 EnvcontentCACC==1 & provide & decelerate & when road=highway without a centerline& weather=water snow and frost& see<50& p=[0.06,0.1]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9915591224
+				UCA141 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9869776165
+				UCA134 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=sunny and dry& see<50& p=[0.01,0.03]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9900935477
+				UCA139 EnvcontentCACC==1 & provide & decelerate & when road=urban road without a centerline& weather=freezing& see>=200& p=[0.03,0.06]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9903706694
+				UCA136 EnvcontentCACC==1 & provide & decelerate & when road=highway 1 lane same direction& weather=wet small amount of water and low temperature& see>=50 and see<150& p=[0.03,0.06]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9894115489
+				UCA142 EnvcontentCACC==1 & not provide & decelerate & when road=highway 1 lane same direction& weather=wet small amount of water and low temperature& see>=50 and see<150& p=[0.03,0.06]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9910857989
+				UCA132 EnvcontentCACC==1 & provide & accelerate & when road=highway without a centerline& weather=water snow and frost& see<50& p=[0.06,0.1]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9914030243
+				UCA147 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9926350976
+		H4 compliance to traffic regulation--0.9939147607638887
+			H4.2 Speed below minimum speed limit--0.9909768965166665
+				UCA115 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=sunny and dry& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--1.0
+				UCA126 EnvcontentCACC==1 & not provide & accelerate & when road=highway 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e<vmin+a_e*1--0.9898969801
+				UCA112 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see<50& p=[0.03,0.06]& v_e<vmin+a_e*1--0.9898742466
+				UCA124 EnvcontentCACC==1 & not provide & accelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see<50& p=[0.03,0.06]& v_e<vmin+a_e*1--0.9916725827
+				UCA118 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see<50& p=[0.03,0.06]& v_e<vmin+a_e*1--0.9894919479
+				UCA127 EnvcontentCACC==1 & not provide & accelerate & when road=expressway& weather=sunny and dry& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9923291304
+				UCA120 EnvcontentCACC==1 & provide & decelerate & when road=highway 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e<vmin+a_e*1--0.9908276203
+				UCA114 EnvcontentCACC==1 & provide & accelerate & when road=highway 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e<vmin+a_e*1--0.9921214679
+				UCA116 EnvcontentCACC==1 & provide & accelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9904429379
+				UCA128 EnvcontentCACC==1 & not provide & accelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9891141254
+				UCA119 EnvcontentCACC==1 & provide & decelerate & when road=highway without a centerline& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9909165584
+				UCA123 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=wet water and low temperature& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9897989007
+				UCA129 EnvcontentCACC==1 & not provide & accelerate & when road=urban road 1 lane same direction& weather=wet water and low temperature& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9900866118
+				UCA121 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=sunny and dry& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9930138781
+				UCA113 EnvcontentCACC==1 & provide & accelerate & when road=highway without a centerline& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.989708916
+				UCA122 EnvcontentCACC==1 & provide & decelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.988032591
+				UCA117 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=wet water and low temperature& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9912470119
+				UCA125 EnvcontentCACC==1 & not provide & accelerate & when road=highway without a centerline& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9890086302
+			H4.1 Speed above the maximum speed limit--0.996852625011111
+				UCA94 EnvcontentCACC==1 & provide & accelerate & when road=urban road without a centerline& weather=accumulated snow and low temperature& see>=200& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+				UCA111 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--1.0
+				UCA96 EnvcontentCACC==1 & provide & accelerate & when road=highway 1 lane same direction& weather=wet water and low temperature& see<50& p=[0.03,0.06]& v_e>vmax-a_e*1--1.0
+				UCA104 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see<50& p=[0.01,0.03]& v_e>vmax-a_e*1--0.9909574551
+				UCA101 EnvcontentCACC==1 & provide & decelerate & when road=highway without a centerline& weather=sunny and dry& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--0.9903545134
+				UCA105 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--0.9886022281
+				UCA99 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--1.0
+				UCA102 EnvcontentCACC==1 & provide & decelerate & when road=highway 1 lane same direction& weather=wet water and low temperature& see<50& p=[0.03,0.06]& v_e>vmax-a_e*1--0.9901651417
+				UCA106 EnvcontentCACC==1 & not provide & decelerate & when road=urban road without a centerline& weather=accumulated snow and low temperature& see>=200& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+				UCA95 EnvcontentCACC==1 & provide & accelerate & when road=highway without a centerline& weather=sunny and dry& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--1.0
+				UCA107 EnvcontentCACC==1 & not provide & decelerate & when road=highway without a centerline& weather=sunny and dry& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--1.0
+				UCA100 EnvcontentCACC==1 & provide & decelerate & when road=urban road without a centerline& weather=accumulated snow and low temperature& see>=200& p=[0.01,0.03]& v_e>vmax-a_e*1--0.9898158411
+				UCA103 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e>vmax-a_e*1--0.9934520708
+				UCA108 EnvcontentCACC==1 & not provide & decelerate & when road=highway 1 lane same direction& weather=wet water and low temperature& see<50& p=[0.03,0.06]& v_e>vmax-a_e*1--1.0
+				UCA98 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see<50& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+				UCA109 EnvcontentCACC==1 & not provide & decelerate & when road=expressway& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+				UCA110 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see<50& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+				UCA97 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+		H3 keeping minimum separation--0.9896874775523808
+			H3.1 violate safety distance--0.9896874775523808
+				UCA80 EnvcontentCACC==1 & provide & decelerate & when road=highway without a centerline& weather=wet water and low temperature& see>=200& p=[0.03,0.06]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9888057271
+				UCA75 EnvcontentCACC==1 & provide & accelerate & when road=highway 1 lane same direction& weather=accumulated snow and low temperature& see>150 and see<200& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9906007778
+				UCA74 EnvcontentCACC==1 & provide & accelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see<50& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9908398556
+				UCA79 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=sunny and dry& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9907875097
+				UCA91 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=freezing& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9917305308
+				UCA86 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=sunny and dry& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9885961512
+				UCA76 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=accumulated snow and low temperature& see>=50 and see<150& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9893581047
+				UCA92 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9868950143
+				UCA78 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9898515796
+				UCA84 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=freezing& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9827313979
+				UCA88 EnvcontentCACC==1 & not provide & decelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see<50& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.989024499
+				UCA82 EnvcontentCACC==1 & provide & decelerate & when road=highway 1 lane same direction& weather=accumulated snow and low temperature& see>150 and see<200& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9900857755
+				UCA73 EnvcontentCACC==1 & provide & accelerate & when road=highway without a centerline& weather=wet water and low temperature& see>=200& p=[0.03,0.06]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9916793867
+				UCA89 EnvcontentCACC==1 & not provide & decelerate & when road=highway 1 lane same direction& weather=accumulated snow and low temperature& see>150 and see<200& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9902666556
+				UCA85 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9903367656
+				UCA83 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=accumulated snow and low temperature& see>=50 and see<150& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9896535714
+				UCA87 EnvcontentCACC==1 & not provide & decelerate & when road=highway without a centerline& weather=wet water and low temperature& see>=200& p=[0.03,0.06]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9896036747
+				UCA81 EnvcontentCACC==1 & provide & decelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see<50& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9888475175
+				UCA93 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=sunny and dry& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9913187815
+				UCA77 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=freezing& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.989880239
+				UCA90 EnvcontentCACC==1 & not provide & decelerate & when road=expressway& weather=accumulated snow and low temperature& see>=50 and see<150& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9925435134
+		H2 assuring cleared distance ahead--0.9869918888583333
+			H2.1 violate lateral distance--0.9869918888583333
+				UCA72 EnvcontentCACC==1 & not provide & turn & when road=urban road 1 lane same direction& weather=freezing& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.986417848
+				UCA67 EnvcontentCACC==1 & not provide & turn & when road=expressway& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.01,0.03]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9843725747
+				UCA68 EnvcontentCACC==1 & not provide & turn & when road=urban road 1 lane same direction& weather=sunny and dry& see>=200& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9896089056
+				UCA62 EnvcontentCACC==1 & provide & turn & when road=urban road 1 lane same direction& weather=sunny and dry& see>=200& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9905792144
+				UCA70 EnvcontentCACC==1 & not provide & turn & when road=highway without a centerline& weather=accumulated snow and low temperature& see<50& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9915036368
+				UCA69 EnvcontentCACC==1 & not provide & turn & when road=urban road without a centerline& weather=water snow and frost& see>=50 and see<150& p=[0.03,0.06]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9865202933
+				UCA71 EnvcontentCACC==1 & not provide & turn & when road=highway 1 lane same direction& weather=wet water and low temperature& see<50& p=[0.01,0.03]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9861703221
+				UCA63 EnvcontentCACC==1 & provide & turn & when road=urban road without a centerline& weather=water snow and frost& see>=50 and see<150& p=[0.03,0.06]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9808492465
+				UCA66 EnvcontentCACC==1 & provide & turn & when road=urban road 1 lane same direction& weather=freezing& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9833032295
+				UCA61 EnvcontentCACC==1 & provide & turn & when road=expressway& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.01,0.03]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9839695073
+				UCA64 EnvcontentCACC==1 & provide & turn & when road=highway without a centerline& weather=accumulated snow and low temperature& see<50& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9911450981
+				UCA65 EnvcontentCACC==1 & provide & turn & when road=highway 1 lane same direction& weather=wet water and low temperature& see<50& p=[0.01,0.03]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.98946279
+		H1 maintaining vehicle stability--0.9821928502837962
+			H1.3 Excessive lateral acceleration--0.9812940736125001
+				UCA40 EnvcontentCACC==1 & provide & accelerate & when road=urban road without a centerline& weather=wet water and low temperature& see>=50 and see<150& p=[0.03,0.06]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9890147985
+				UCA54 EnvcontentCACC==1 & provide & turn & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see>=200& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9783071877
+				UCA57 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see>=200& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9890804163
+				UCA51 EnvcontentCACC==1 & provide & turn & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see>=200& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9861231778
+				UCA56 EnvcontentCACC==1 & not provide & decelerate & when road=expressway& weather=freezing& see<50& p=[0.03,0.06]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9805487623
+				UCA47 EnvcontentCACC==1 & provide & decelerate & when road=highway 1 lane same direction& weather=sunny and dry& see<50& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9698438836
+				UCA37 EnvcontentCACC==1 & provide & accelerate & when road=highway without a centerline& weather=water snow and frost& see>150 and see<200& p=[0.06,0.1]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9854330445
+				UCA50 EnvcontentCACC==1 & provide & turn & when road=expressway& weather=freezing& see<50& p=[0.03,0.06]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9780343719
+				UCA58 EnvcontentCACC==1 & not provide & decelerate & when road=urban road without a centerline& weather=wet water and low temperature& see>=50 and see<150& p=[0.03,0.06]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9879110534
+				UCA39 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see>=200& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9928041171
+				UCA60 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see>=200& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9870499775
+				UCA49 EnvcontentCACC==1 & provide & turn & when road=highway without a centerline& weather=water snow and frost& see>150 and see<200& p=[0.06,0.1]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9793078914
+				UCA38 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=freezing& see<50& p=[0.03,0.06]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9840475035
+				UCA53 EnvcontentCACC==1 & provide & turn & when road=highway 1 lane same direction& weather=sunny and dry& see<50& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9602748668
+				UCA43 EnvcontentCACC==1 & provide & decelerate & when road=highway without a centerline& weather=water snow and frost& see>150 and see<200& p=[0.06,0.1]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9794654926
+				UCA46 EnvcontentCACC==1 & provide & decelerate & when road=urban road without a centerline& weather=wet water and low temperature& see>=50 and see<150& p=[0.03,0.06]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9864215577
+				UCA44 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=freezing& see<50& p=[0.03,0.06]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9795551053
+				UCA59 EnvcontentCACC==1 & not provide & decelerate & when road=highway 1 lane same direction& weather=sunny and dry& see<50& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9687518877
+				UCA45 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see>=200& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9869236315
+				UCA48 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see>=200& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9818696921
+				UCA42 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see>=200& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9837650872
+				UCA41 EnvcontentCACC==1 & provide & accelerate & when road=highway 1 lane same direction& weather=sunny and dry& see<50& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9645762792
+				UCA55 EnvcontentCACC==1 & not provide & decelerate & when road=highway without a centerline& weather=water snow and frost& see>150 and see<200& p=[0.06,0.1]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9857249302
+				UCA52 EnvcontentCACC==1 & provide & turn & when road=urban road without a centerline& weather=wet water and low temperature& see>=50 and see<150& p=[0.03,0.06]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9862230509
+			H1.2 violate Maximum longitudinal deceleration--0.9801156270388885
+				UCA21 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=water snow and frost& see>=200& p=[0.03,0.06]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9786176336
+				UCA31 EnvcontentCACC==1 & not provide & accelerate & when road=expressway& weather=wet water and low temperature& see>=50 and see<150& p=[0.06,0.1]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9797389046
+				UCA27 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=water snow and frost& see>=200& p=[0.03,0.06]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9815093614
+				UCA30 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=freezing& see>=200& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9818382858
+				UCA29 EnvcontentCACC==1 & provide & decelerate & when road=urban road without a centerline& weather=accumulated snow and low temperature& see<50& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9828945923
+				UCA24 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=freezing& see>=200& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9824489772
+				UCA22 EnvcontentCACC==1 & provide & accelerate & when road=highway without a centerline& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.06,0.1]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9742626383
+				UCA26 EnvcontentCACC==1 & provide & decelerate & when road=highway 1 lane same direction& weather=sunny and dry& see<50& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.979712637
+				UCA19 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=wet water and low temperature& see>=50 and see<150& p=[0.06,0.1]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9797776957
+				UCA36 EnvcontentCACC==1 & not provide & accelerate & when road=urban road 1 lane same direction& weather=freezing& see>=200& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9820499431
+				UCA33 EnvcontentCACC==1 & not provide & accelerate & when road=expressway& weather=water snow and frost& see>=200& p=[0.03,0.06]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9848621041
+				UCA32 EnvcontentCACC==1 & not provide & accelerate & when road=highway 1 lane same direction& weather=sunny and dry& see<50& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9804650389
+				UCA20 EnvcontentCACC==1 & provide & accelerate & when road=highway 1 lane same direction& weather=sunny and dry& see<50& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9749709785
+				UCA28 EnvcontentCACC==1 & provide & decelerate & when road=highway without a centerline& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.06,0.1]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9781018388
+				UCA23 EnvcontentCACC==1 & provide & accelerate & when road=urban road without a centerline& weather=accumulated snow and low temperature& see<50& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9834459665
+				UCA25 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=wet water and low temperature& see>=50 and see<150& p=[0.06,0.1]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9779367036
+				UCA34 EnvcontentCACC==1 & not provide & accelerate & when road=highway without a centerline& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.06,0.1]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9773656379
+				UCA35 EnvcontentCACC==1 & not provide & accelerate & when road=urban road without a centerline& weather=accumulated snow and low temperature& see<50& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9820823494
+			H1.1 violate Maximum longitudinal acceleration--0.9851688502000001
+				UCA7 EnvcontentCACC==1 & provide & decelerate & when road=urban road without a centerline& weather=sunny and dry& see>150 and see<200& p=[0.03,0.06]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9796381069
+				UCA18 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see>=200& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9828677332
+				UCA17 EnvcontentCACC==1 & not provide & decelerate & when road=highway without a centerline& weather=wet water and low temperature& see<50& p=[0.06,0.1]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9853830491
+				UCA13 EnvcontentCACC==1 & not provide & decelerate & when road=urban road without a centerline& weather=sunny and dry& see>150 and see<200& p=[0.03,0.06]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9839414548
+				UCA8 EnvcontentCACC==1 & provide & decelerate & when road=highway 1 lane same direction& weather=freezing& see>=200& p=[0.06,0.1]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.986061234
+				UCA3 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9846063145
+				UCA14 EnvcontentCACC==1 & not provide & decelerate & when road=highway 1 lane same direction& weather=freezing& see>=200& p=[0.06,0.1]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9871731923
+				UCA2 EnvcontentCACC==1 & provide & accelerate & when road=highway 1 lane same direction& weather=freezing& see>=200& p=[0.06,0.1]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9894877563
+				UCA10 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=accumulated snow and low temperature& see<50& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9861513488
+				UCA12 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see>=200& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9819000698
+				UCA15 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9858055077
+				UCA1 EnvcontentCACC==1 & provide & accelerate & when road=urban road without a centerline& weather=sunny and dry& see>150 and see<200& p=[0.03,0.06]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9849925629
+				UCA5 EnvcontentCACC==1 & provide & accelerate & when road=highway without a centerline& weather=wet water and low temperature& see<50& p=[0.06,0.1]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.986320665
+				UCA4 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=accumulated snow and low temperature& see<50& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9879686563
+				UCA16 EnvcontentCACC==1 & not provide & decelerate & when road=expressway& weather=accumulated snow and low temperature& see<50& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.987950892
+				UCA11 EnvcontentCACC==1 & provide & decelerate & when road=highway without a centerline& weather=wet water and low temperature& see<50& p=[0.06,0.1]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9852528917
+				UCA6 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see>=200& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9841908153
+				UCA9 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.983347053
+	L2 Lost or damaged means of transportation--0.9886555518016799
+		H5 adherence to best practices--0.99049078155
+			H5.1 violate two-second rule--0.99049078155
+				UCA143 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=wet water and low temperature& see>150 and see<200& p=[0.01,0.03]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9909060783
+				UCA144 EnvcontentCACC==1 & not provide & decelerate & when road=highway without a centerline& weather=water snow and frost& see<50& p=[0.06,0.1]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9913864876
+				UCA130 EnvcontentCACC==1 & provide & accelerate & when road=highway 1 lane same direction& weather=wet small amount of water and low temperature& see>=50 and see<150& p=[0.03,0.06]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9903350048
+				UCA140 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=sunny and dry& see<50& p=[0.01,0.03]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9901945959
+				UCA145 EnvcontentCACC==1 & not provide & decelerate & when road=urban road without a centerline& weather=freezing& see>=200& p=[0.03,0.06]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9917805789
+				UCA135 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9917196227
+				UCA133 EnvcontentCACC==1 & provide & accelerate & when road=urban road without a centerline& weather=freezing& see>=200& p=[0.03,0.06]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9896903044
+				UCA131 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=wet water and low temperature& see>150 and see<200& p=[0.01,0.03]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9894875122
+				UCA137 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=wet water and low temperature& see>150 and see<200& p=[0.01,0.03]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9893514196
+				UCA146 EnvcontentCACC==1 & not provide & decelerate & when road=expressway& weather=sunny and dry& see<50& p=[0.01,0.03]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9904460378
+				UCA138 EnvcontentCACC==1 & provide & decelerate & when road=highway without a centerline& weather=water snow and frost& see<50& p=[0.06,0.1]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9915591224
+				UCA141 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9869776165
+				UCA134 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=sunny and dry& see<50& p=[0.01,0.03]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9900935477
+				UCA139 EnvcontentCACC==1 & provide & decelerate & when road=urban road without a centerline& weather=freezing& see>=200& p=[0.03,0.06]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9903706694
+				UCA136 EnvcontentCACC==1 & provide & decelerate & when road=highway 1 lane same direction& weather=wet small amount of water and low temperature& see>=50 and see<150& p=[0.03,0.06]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9894115489
+				UCA142 EnvcontentCACC==1 & not provide & decelerate & when road=highway 1 lane same direction& weather=wet small amount of water and low temperature& see>=50 and see<150& p=[0.03,0.06]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9910857989
+				UCA132 EnvcontentCACC==1 & provide & accelerate & when road=highway without a centerline& weather=water snow and frost& see<50& p=[0.06,0.1]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9914030243
+				UCA147 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)/abs(v_k-v_e)<2--0.9926350976
+		H4 compliance to traffic regulation--0.9939147607638887
+			H4.2 Speed below minimum speed limit--0.9909768965166665
+				UCA115 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=sunny and dry& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--1.0
+				UCA126 EnvcontentCACC==1 & not provide & accelerate & when road=highway 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e<vmin+a_e*1--0.9898969801
+				UCA112 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see<50& p=[0.03,0.06]& v_e<vmin+a_e*1--0.9898742466
+				UCA124 EnvcontentCACC==1 & not provide & accelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see<50& p=[0.03,0.06]& v_e<vmin+a_e*1--0.9916725827
+				UCA118 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see<50& p=[0.03,0.06]& v_e<vmin+a_e*1--0.9894919479
+				UCA127 EnvcontentCACC==1 & not provide & accelerate & when road=expressway& weather=sunny and dry& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9923291304
+				UCA120 EnvcontentCACC==1 & provide & decelerate & when road=highway 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e<vmin+a_e*1--0.9908276203
+				UCA114 EnvcontentCACC==1 & provide & accelerate & when road=highway 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e<vmin+a_e*1--0.9921214679
+				UCA116 EnvcontentCACC==1 & provide & accelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9904429379
+				UCA128 EnvcontentCACC==1 & not provide & accelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9891141254
+				UCA119 EnvcontentCACC==1 & provide & decelerate & when road=highway without a centerline& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9909165584
+				UCA123 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=wet water and low temperature& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9897989007
+				UCA129 EnvcontentCACC==1 & not provide & accelerate & when road=urban road 1 lane same direction& weather=wet water and low temperature& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9900866118
+				UCA121 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=sunny and dry& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9930138781
+				UCA113 EnvcontentCACC==1 & provide & accelerate & when road=highway without a centerline& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.989708916
+				UCA122 EnvcontentCACC==1 & provide & decelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.988032591
+				UCA117 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=wet water and low temperature& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9912470119
+				UCA125 EnvcontentCACC==1 & not provide & accelerate & when road=highway without a centerline& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9890086302
+			H4.1 Speed above the maximum speed limit--0.996852625011111
+				UCA94 EnvcontentCACC==1 & provide & accelerate & when road=urban road without a centerline& weather=accumulated snow and low temperature& see>=200& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+				UCA111 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--1.0
+				UCA96 EnvcontentCACC==1 & provide & accelerate & when road=highway 1 lane same direction& weather=wet water and low temperature& see<50& p=[0.03,0.06]& v_e>vmax-a_e*1--1.0
+				UCA104 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see<50& p=[0.01,0.03]& v_e>vmax-a_e*1--0.9909574551
+				UCA101 EnvcontentCACC==1 & provide & decelerate & when road=highway without a centerline& weather=sunny and dry& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--0.9903545134
+				UCA105 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--0.9886022281
+				UCA99 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--1.0
+				UCA102 EnvcontentCACC==1 & provide & decelerate & when road=highway 1 lane same direction& weather=wet water and low temperature& see<50& p=[0.03,0.06]& v_e>vmax-a_e*1--0.9901651417
+				UCA106 EnvcontentCACC==1 & not provide & decelerate & when road=urban road without a centerline& weather=accumulated snow and low temperature& see>=200& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+				UCA95 EnvcontentCACC==1 & provide & accelerate & when road=highway without a centerline& weather=sunny and dry& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--1.0
+				UCA107 EnvcontentCACC==1 & not provide & decelerate & when road=highway without a centerline& weather=sunny and dry& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--1.0
+				UCA100 EnvcontentCACC==1 & provide & decelerate & when road=urban road without a centerline& weather=accumulated snow and low temperature& see>=200& p=[0.01,0.03]& v_e>vmax-a_e*1--0.9898158411
+				UCA103 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e>vmax-a_e*1--0.9934520708
+				UCA108 EnvcontentCACC==1 & not provide & decelerate & when road=highway 1 lane same direction& weather=wet water and low temperature& see<50& p=[0.03,0.06]& v_e>vmax-a_e*1--1.0
+				UCA98 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see<50& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+				UCA109 EnvcontentCACC==1 & not provide & decelerate & when road=expressway& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+				UCA110 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see<50& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+				UCA97 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+		H3 keeping minimum separation--0.9896874775523808
+			H3.1 violate safety distance--0.9896874775523808
+				UCA80 EnvcontentCACC==1 & provide & decelerate & when road=highway without a centerline& weather=wet water and low temperature& see>=200& p=[0.03,0.06]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9888057271
+				UCA75 EnvcontentCACC==1 & provide & accelerate & when road=highway 1 lane same direction& weather=accumulated snow and low temperature& see>150 and see<200& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9906007778
+				UCA74 EnvcontentCACC==1 & provide & accelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see<50& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9908398556
+				UCA79 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=sunny and dry& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9907875097
+				UCA91 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=freezing& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9917305308
+				UCA86 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=sunny and dry& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9885961512
+				UCA76 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=accumulated snow and low temperature& see>=50 and see<150& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9893581047
+				UCA92 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9868950143
+				UCA78 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9898515796
+				UCA84 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=freezing& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9827313979
+				UCA88 EnvcontentCACC==1 & not provide & decelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see<50& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.989024499
+				UCA82 EnvcontentCACC==1 & provide & decelerate & when road=highway 1 lane same direction& weather=accumulated snow and low temperature& see>150 and see<200& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9900857755
+				UCA73 EnvcontentCACC==1 & provide & accelerate & when road=highway without a centerline& weather=wet water and low temperature& see>=200& p=[0.03,0.06]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9916793867
+				UCA89 EnvcontentCACC==1 & not provide & decelerate & when road=highway 1 lane same direction& weather=accumulated snow and low temperature& see>150 and see<200& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9902666556
+				UCA85 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9903367656
+				UCA83 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=accumulated snow and low temperature& see>=50 and see<150& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9896535714
+				UCA87 EnvcontentCACC==1 & not provide & decelerate & when road=highway without a centerline& weather=wet water and low temperature& see>=200& p=[0.03,0.06]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9896036747
+				UCA81 EnvcontentCACC==1 & provide & decelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see<50& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9888475175
+				UCA93 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=sunny and dry& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9913187815
+				UCA77 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=freezing& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.989880239
+				UCA90 EnvcontentCACC==1 & not provide & decelerate & when road=expressway& weather=accumulated snow and low temperature& see>=50 and see<150& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9925435134
+		H2 assuring cleared distance ahead--0.9869918888583333
+			H2.1 violate lateral distance--0.9869918888583333
+				UCA72 EnvcontentCACC==1 & not provide & turn & when road=urban road 1 lane same direction& weather=freezing& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.986417848
+				UCA67 EnvcontentCACC==1 & not provide & turn & when road=expressway& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.01,0.03]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9843725747
+				UCA68 EnvcontentCACC==1 & not provide & turn & when road=urban road 1 lane same direction& weather=sunny and dry& see>=200& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9896089056
+				UCA62 EnvcontentCACC==1 & provide & turn & when road=urban road 1 lane same direction& weather=sunny and dry& see>=200& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9905792144
+				UCA70 EnvcontentCACC==1 & not provide & turn & when road=highway without a centerline& weather=accumulated snow and low temperature& see<50& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9915036368
+				UCA69 EnvcontentCACC==1 & not provide & turn & when road=urban road without a centerline& weather=water snow and frost& see>=50 and see<150& p=[0.03,0.06]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9865202933
+				UCA71 EnvcontentCACC==1 & not provide & turn & when road=highway 1 lane same direction& weather=wet water and low temperature& see<50& p=[0.01,0.03]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9861703221
+				UCA63 EnvcontentCACC==1 & provide & turn & when road=urban road without a centerline& weather=water snow and frost& see>=50 and see<150& p=[0.03,0.06]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9808492465
+				UCA66 EnvcontentCACC==1 & provide & turn & when road=urban road 1 lane same direction& weather=freezing& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9833032295
+				UCA61 EnvcontentCACC==1 & provide & turn & when road=expressway& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.01,0.03]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9839695073
+				UCA64 EnvcontentCACC==1 & provide & turn & when road=highway without a centerline& weather=accumulated snow and low temperature& see<50& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9911450981
+				UCA65 EnvcontentCACC==1 & provide & turn & when road=highway 1 lane same direction& weather=wet water and low temperature& see<50& p=[0.01,0.03]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.98946279
+		H1 maintaining vehicle stability--0.9821928502837962
+			H1.3 Excessive lateral acceleration--0.9812940736125001
+				UCA40 EnvcontentCACC==1 & provide & accelerate & when road=urban road without a centerline& weather=wet water and low temperature& see>=50 and see<150& p=[0.03,0.06]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9890147985
+				UCA54 EnvcontentCACC==1 & provide & turn & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see>=200& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9783071877
+				UCA57 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see>=200& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9890804163
+				UCA51 EnvcontentCACC==1 & provide & turn & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see>=200& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9861231778
+				UCA56 EnvcontentCACC==1 & not provide & decelerate & when road=expressway& weather=freezing& see<50& p=[0.03,0.06]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9805487623
+				UCA47 EnvcontentCACC==1 & provide & decelerate & when road=highway 1 lane same direction& weather=sunny and dry& see<50& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9698438836
+				UCA37 EnvcontentCACC==1 & provide & accelerate & when road=highway without a centerline& weather=water snow and frost& see>150 and see<200& p=[0.06,0.1]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9854330445
+				UCA50 EnvcontentCACC==1 & provide & turn & when road=expressway& weather=freezing& see<50& p=[0.03,0.06]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9780343719
+				UCA58 EnvcontentCACC==1 & not provide & decelerate & when road=urban road without a centerline& weather=wet water and low temperature& see>=50 and see<150& p=[0.03,0.06]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9879110534
+				UCA39 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see>=200& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9928041171
+				UCA60 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see>=200& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9870499775
+				UCA49 EnvcontentCACC==1 & provide & turn & when road=highway without a centerline& weather=water snow and frost& see>150 and see<200& p=[0.06,0.1]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9793078914
+				UCA38 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=freezing& see<50& p=[0.03,0.06]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9840475035
+				UCA53 EnvcontentCACC==1 & provide & turn & when road=highway 1 lane same direction& weather=sunny and dry& see<50& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9602748668
+				UCA43 EnvcontentCACC==1 & provide & decelerate & when road=highway without a centerline& weather=water snow and frost& see>150 and see<200& p=[0.06,0.1]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9794654926
+				UCA46 EnvcontentCACC==1 & provide & decelerate & when road=urban road without a centerline& weather=wet water and low temperature& see>=50 and see<150& p=[0.03,0.06]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9864215577
+				UCA44 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=freezing& see<50& p=[0.03,0.06]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9795551053
+				UCA59 EnvcontentCACC==1 & not provide & decelerate & when road=highway 1 lane same direction& weather=sunny and dry& see<50& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9687518877
+				UCA45 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see>=200& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9869236315
+				UCA48 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see>=200& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9818696921
+				UCA42 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see>=200& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9837650872
+				UCA41 EnvcontentCACC==1 & provide & accelerate & when road=highway 1 lane same direction& weather=sunny and dry& see<50& p=[0.01,0.03]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9645762792
+				UCA55 EnvcontentCACC==1 & not provide & decelerate & when road=highway without a centerline& weather=water snow and frost& see>150 and see<200& p=[0.06,0.1]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9857249302
+				UCA52 EnvcontentCACC==1 & provide & turn & when road=urban road without a centerline& weather=wet water and low temperature& see>=50 and see<150& p=[0.03,0.06]& v_e*v_e*sin(angle_e)/L>lateralmax--0.9862230509
+			H1.2 violate Maximum longitudinal deceleration--0.9801156270388885
+				UCA21 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=water snow and frost& see>=200& p=[0.03,0.06]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9786176336
+				UCA31 EnvcontentCACC==1 & not provide & accelerate & when road=expressway& weather=wet water and low temperature& see>=50 and see<150& p=[0.06,0.1]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9797389046
+				UCA27 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=water snow and frost& see>=200& p=[0.03,0.06]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9815093614
+				UCA30 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=freezing& see>=200& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9818382858
+				UCA29 EnvcontentCACC==1 & provide & decelerate & when road=urban road without a centerline& weather=accumulated snow and low temperature& see<50& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9828945923
+				UCA24 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=freezing& see>=200& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9824489772
+				UCA22 EnvcontentCACC==1 & provide & accelerate & when road=highway without a centerline& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.06,0.1]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9742626383
+				UCA26 EnvcontentCACC==1 & provide & decelerate & when road=highway 1 lane same direction& weather=sunny and dry& see<50& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.979712637
+				UCA19 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=wet water and low temperature& see>=50 and see<150& p=[0.06,0.1]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9797776957
+				UCA36 EnvcontentCACC==1 & not provide & accelerate & when road=urban road 1 lane same direction& weather=freezing& see>=200& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9820499431
+				UCA33 EnvcontentCACC==1 & not provide & accelerate & when road=expressway& weather=water snow and frost& see>=200& p=[0.03,0.06]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9848621041
+				UCA32 EnvcontentCACC==1 & not provide & accelerate & when road=highway 1 lane same direction& weather=sunny and dry& see<50& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9804650389
+				UCA20 EnvcontentCACC==1 & provide & accelerate & when road=highway 1 lane same direction& weather=sunny and dry& see<50& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9749709785
+				UCA28 EnvcontentCACC==1 & provide & decelerate & when road=highway without a centerline& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.06,0.1]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9781018388
+				UCA23 EnvcontentCACC==1 & provide & accelerate & when road=urban road without a centerline& weather=accumulated snow and low temperature& see<50& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9834459665
+				UCA25 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=wet water and low temperature& see>=50 and see<150& p=[0.06,0.1]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9779367036
+				UCA34 EnvcontentCACC==1 & not provide & accelerate & when road=highway without a centerline& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.06,0.1]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9773656379
+				UCA35 EnvcontentCACC==1 & not provide & accelerate & when road=urban road without a centerline& weather=accumulated snow and low temperature& see<50& p=[0.01,0.03]& a_e<-10*(mupeak+p-crr+fd/1500)/km--0.9820823494
+			H1.1 violate Maximum longitudinal acceleration--0.9851688502000001
+				UCA7 EnvcontentCACC==1 & provide & decelerate & when road=urban road without a centerline& weather=sunny and dry& see>150 and see<200& p=[0.03,0.06]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9796381069
+				UCA18 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see>=200& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9828677332
+				UCA17 EnvcontentCACC==1 & not provide & decelerate & when road=highway without a centerline& weather=wet water and low temperature& see<50& p=[0.06,0.1]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9853830491
+				UCA13 EnvcontentCACC==1 & not provide & decelerate & when road=urban road without a centerline& weather=sunny and dry& see>150 and see<200& p=[0.03,0.06]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9839414548
+				UCA8 EnvcontentCACC==1 & provide & decelerate & when road=highway 1 lane same direction& weather=freezing& see>=200& p=[0.06,0.1]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.986061234
+				UCA3 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9846063145
+				UCA14 EnvcontentCACC==1 & not provide & decelerate & when road=highway 1 lane same direction& weather=freezing& see>=200& p=[0.06,0.1]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9871731923
+				UCA2 EnvcontentCACC==1 & provide & accelerate & when road=highway 1 lane same direction& weather=freezing& see>=200& p=[0.06,0.1]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9894877563
+				UCA10 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=accumulated snow and low temperature& see<50& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9861513488
+				UCA12 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see>=200& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9819000698
+				UCA15 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9858055077
+				UCA1 EnvcontentCACC==1 & provide & accelerate & when road=urban road without a centerline& weather=sunny and dry& see>150 and see<200& p=[0.03,0.06]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9849925629
+				UCA5 EnvcontentCACC==1 & provide & accelerate & when road=highway without a centerline& weather=wet water and low temperature& see<50& p=[0.06,0.1]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.986320665
+				UCA4 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=accumulated snow and low temperature& see<50& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9879686563
+				UCA16 EnvcontentCACC==1 & not provide & decelerate & when road=expressway& weather=accumulated snow and low temperature& see<50& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.987950892
+				UCA11 EnvcontentCACC==1 & provide & decelerate & when road=highway without a centerline& weather=wet water and low temperature& see<50& p=[0.06,0.1]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9852528917
+				UCA6 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see>=200& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.9841908153
+				UCA9 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.01,0.03]& a_e>10*(mupeak-p-crr+fd/1500)/km--0.983347053
+	L3 The mission failed and caused financial loss--0.9939147607638887
+		H4 compliance to traffic regulation--0.9939147607638887
+			H4.2 Speed below minimum speed limit--0.9909768965166665
+				UCA115 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=sunny and dry& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--1.0
+				UCA126 EnvcontentCACC==1 & not provide & accelerate & when road=highway 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e<vmin+a_e*1--0.9898969801
+				UCA112 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see<50& p=[0.03,0.06]& v_e<vmin+a_e*1--0.9898742466
+				UCA124 EnvcontentCACC==1 & not provide & accelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see<50& p=[0.03,0.06]& v_e<vmin+a_e*1--0.9916725827
+				UCA118 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=accumulated snow and low temperature& see<50& p=[0.03,0.06]& v_e<vmin+a_e*1--0.9894919479
+				UCA127 EnvcontentCACC==1 & not provide & accelerate & when road=expressway& weather=sunny and dry& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9923291304
+				UCA120 EnvcontentCACC==1 & provide & decelerate & when road=highway 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e<vmin+a_e*1--0.9908276203
+				UCA114 EnvcontentCACC==1 & provide & accelerate & when road=highway 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e<vmin+a_e*1--0.9921214679
+				UCA116 EnvcontentCACC==1 & provide & accelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9904429379
+				UCA128 EnvcontentCACC==1 & not provide & accelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9891141254
+				UCA119 EnvcontentCACC==1 & provide & decelerate & when road=highway without a centerline& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9909165584
+				UCA123 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=wet water and low temperature& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9897989007
+				UCA129 EnvcontentCACC==1 & not provide & accelerate & when road=urban road 1 lane same direction& weather=wet water and low temperature& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9900866118
+				UCA121 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=sunny and dry& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9930138781
+				UCA113 EnvcontentCACC==1 & provide & accelerate & when road=highway without a centerline& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.989708916
+				UCA122 EnvcontentCACC==1 & provide & decelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.988032591
+				UCA117 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=wet water and low temperature& see>=200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9912470119
+				UCA125 EnvcontentCACC==1 & not provide & accelerate & when road=highway without a centerline& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e<vmin+a_e*1--0.9890086302
+			H4.1 Speed above the maximum speed limit--0.996852625011111
+				UCA94 EnvcontentCACC==1 & provide & accelerate & when road=urban road without a centerline& weather=accumulated snow and low temperature& see>=200& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+				UCA111 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--1.0
+				UCA96 EnvcontentCACC==1 & provide & accelerate & when road=highway 1 lane same direction& weather=wet water and low temperature& see<50& p=[0.03,0.06]& v_e>vmax-a_e*1--1.0
+				UCA104 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see<50& p=[0.01,0.03]& v_e>vmax-a_e*1--0.9909574551
+				UCA101 EnvcontentCACC==1 & provide & decelerate & when road=highway without a centerline& weather=sunny and dry& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--0.9903545134
+				UCA105 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--0.9886022281
+				UCA99 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--1.0
+				UCA102 EnvcontentCACC==1 & provide & decelerate & when road=highway 1 lane same direction& weather=wet water and low temperature& see<50& p=[0.03,0.06]& v_e>vmax-a_e*1--0.9901651417
+				UCA106 EnvcontentCACC==1 & not provide & decelerate & when road=urban road without a centerline& weather=accumulated snow and low temperature& see>=200& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+				UCA95 EnvcontentCACC==1 & provide & accelerate & when road=highway without a centerline& weather=sunny and dry& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--1.0
+				UCA107 EnvcontentCACC==1 & not provide & decelerate & when road=highway without a centerline& weather=sunny and dry& see>=50 and see<150& p=[0.06,0.1]& v_e>vmax-a_e*1--1.0
+				UCA100 EnvcontentCACC==1 & provide & decelerate & when road=urban road without a centerline& weather=accumulated snow and low temperature& see>=200& p=[0.01,0.03]& v_e>vmax-a_e*1--0.9898158411
+				UCA103 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e>vmax-a_e*1--0.9934520708
+				UCA108 EnvcontentCACC==1 & not provide & decelerate & when road=highway 1 lane same direction& weather=wet water and low temperature& see<50& p=[0.03,0.06]& v_e>vmax-a_e*1--1.0
+				UCA98 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see<50& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+				UCA109 EnvcontentCACC==1 & not provide & decelerate & when road=expressway& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+				UCA110 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=wet small amount of water and low temperature& see<50& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+				UCA97 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=freezing& see>150 and see<200& p=[0.01,0.03]& v_e>vmax-a_e*1--1.0
+	L4 Loss or damage of items outside the vehicle--0.988339683205357
+		H3 keeping minimum separation--0.9896874775523808
+			H3.1 violate safety distance--0.9896874775523808
+				UCA80 EnvcontentCACC==1 & provide & decelerate & when road=highway without a centerline& weather=wet water and low temperature& see>=200& p=[0.03,0.06]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9888057271
+				UCA75 EnvcontentCACC==1 & provide & accelerate & when road=highway 1 lane same direction& weather=accumulated snow and low temperature& see>150 and see<200& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9906007778
+				UCA74 EnvcontentCACC==1 & provide & accelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see<50& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9908398556
+				UCA79 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=sunny and dry& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9907875097
+				UCA91 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=freezing& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9917305308
+				UCA86 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=sunny and dry& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9885961512
+				UCA76 EnvcontentCACC==1 & provide & accelerate & when road=expressway& weather=accumulated snow and low temperature& see>=50 and see<150& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9893581047
+				UCA92 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9868950143
+				UCA78 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9898515796
+				UCA84 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=freezing& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9827313979
+				UCA88 EnvcontentCACC==1 & not provide & decelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see<50& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.989024499
+				UCA82 EnvcontentCACC==1 & provide & decelerate & when road=highway 1 lane same direction& weather=accumulated snow and low temperature& see>150 and see<200& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9900857755
+				UCA73 EnvcontentCACC==1 & provide & accelerate & when road=highway without a centerline& weather=wet water and low temperature& see>=200& p=[0.03,0.06]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9916793867
+				UCA89 EnvcontentCACC==1 & not provide & decelerate & when road=highway 1 lane same direction& weather=accumulated snow and low temperature& see>150 and see<200& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9902666556
+				UCA85 EnvcontentCACC==1 & provide & decelerate & when road=urban road 1 lane same direction& weather=water snow and frost& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9903367656
+				UCA83 EnvcontentCACC==1 & provide & decelerate & when road=expressway& weather=accumulated snow and low temperature& see>=50 and see<150& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9896535714
+				UCA87 EnvcontentCACC==1 & not provide & decelerate & when road=highway without a centerline& weather=wet water and low temperature& see>=200& p=[0.03,0.06]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9896036747
+				UCA81 EnvcontentCACC==1 & provide & decelerate & when road=urban road without a centerline& weather=wet small amount of water and low temperature& see<50& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9888475175
+				UCA93 EnvcontentCACC==1 & not provide & decelerate & when road=urban road 1 lane same direction& weather=sunny and dry& see>=200& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9913187815
+				UCA77 EnvcontentCACC==1 & provide & accelerate & when road=urban road 1 lane same direction& weather=freezing& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.989880239
+				UCA90 EnvcontentCACC==1 & not provide & decelerate & when road=expressway& weather=accumulated snow and low temperature& see>=50 and see<150& p=[0.01,0.03]& abs(x_k-x_e)<dsafe & abs(y_k-y_e)<0.5--0.9925435134
+		H2 assuring cleared distance ahead--0.9869918888583333
+			H2.1 violate lateral distance--0.9869918888583333
+				UCA72 EnvcontentCACC==1 & not provide & turn & when road=urban road 1 lane same direction& weather=freezing& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.986417848
+				UCA67 EnvcontentCACC==1 & not provide & turn & when road=expressway& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.01,0.03]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9843725747
+				UCA68 EnvcontentCACC==1 & not provide & turn & when road=urban road 1 lane same direction& weather=sunny and dry& see>=200& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9896089056
+				UCA62 EnvcontentCACC==1 & provide & turn & when road=urban road 1 lane same direction& weather=sunny and dry& see>=200& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9905792144
+				UCA70 EnvcontentCACC==1 & not provide & turn & when road=highway without a centerline& weather=accumulated snow and low temperature& see<50& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9915036368
+				UCA69 EnvcontentCACC==1 & not provide & turn & when road=urban road without a centerline& weather=water snow and frost& see>=50 and see<150& p=[0.03,0.06]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9865202933
+				UCA71 EnvcontentCACC==1 & not provide & turn & when road=highway 1 lane same direction& weather=wet water and low temperature& see<50& p=[0.01,0.03]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9861703221
+				UCA63 EnvcontentCACC==1 & provide & turn & when road=urban road without a centerline& weather=water snow and frost& see>=50 and see<150& p=[0.03,0.06]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9808492465
+				UCA66 EnvcontentCACC==1 & provide & turn & when road=urban road 1 lane same direction& weather=freezing& see>=50 and see<150& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9833032295
+				UCA61 EnvcontentCACC==1 & provide & turn & when road=expressway& weather=wet small amount of water and low temperature& see>150 and see<200& p=[0.01,0.03]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9839695073
+				UCA64 EnvcontentCACC==1 & provide & turn & when road=highway without a centerline& weather=accumulated snow and low temperature& see<50& p=[0.06,0.1]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.9911450981
+				UCA65 EnvcontentCACC==1 & provide & turn & when road=highway 1 lane same direction& weather=wet water and low temperature& see<50& p=[0.01,0.03]& abs(x_k-x_e)<0.5 & abs(y_k-y_e)<0.5--0.98946279
