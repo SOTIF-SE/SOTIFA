@@ -60,7 +60,7 @@ SOTIFA
 │        └── EnvAADLAnalysis
 └── README
 ```
-We have provided installation and usage videos for SOTIFA `SOTIFA Installation.mp4 ` and `SOTIFA Usage.mp4 `。
+We have provided installation and usage videos for SOTIFA `SOTIFA Installation.mp4 ` and `SOTIFA Usage.mp4 `
 
 This project contains experiment result.
 
