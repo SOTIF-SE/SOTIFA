@@ -1,0 +1,21 @@
+property set VehicleParam is
+	 restrictedSignalAreaX_env: aadlreal applies to (system);
+	 restrictedSignalAreaY_env: aadlreal applies to (system);
+	 staticActorX_env: aadlreal applies to (system);
+	 staticActorY_env: aadlreal applies to (system);
+     randomActorX_env: aadlreal applies to (system); 
+     
+     
+end VehicleParam;
+
+--	 A: constant aadlreal => 1.0;
+--	 Gamma: constant aadlreal => 0.1;
+--	 alpha: constant aadlreal => 100.0; 
+--	 headway: constant aadlreal => 1.5;
+--	 Amax :  constant aadlreal => 6.0;
+--	 period : constant aadlreal => 10.0;
+	 
+--	 Mass: constant aadlreal => 1.0;
+
+
+--	 

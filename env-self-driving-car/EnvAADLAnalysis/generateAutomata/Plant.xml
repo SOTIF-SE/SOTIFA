@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sspaceex xmlns="http://www-verimag.imag.fr/xml-namespaces/sspaceex" version="0.2" math="SpaceEx">
+<component id="system">
+<param name="control_a_ego" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="control_theta_ego" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="x_ego" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="v_ego" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="a_ego" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="theta_ego" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="Mass" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="Length" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="Period" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="CRotInert" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="Amax" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="CRollResis" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="t" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+
+<location id="1" name="init1">
+<invariant>
+</invariant>
+<flow>
+t'=1   &amp;  x_ego'=v_ego  &amp;  v_ego'=a_ego 
+</flow>
+</location>
+
+
+<transition source="1" target="1">
+<label>controlspeed_cmd</label>
+<guard></guard>
+<assignment>
+a_ego:= control_a_ego
+</assignment>
+</transition>
+
+<transition source="1" target="1">
+<label>steer_cmd</label>
+<guard></guard>
+<assignment>
+theta_ego:= control_theta_ego
+</assignment>
+</transition>
+
+</component>
+</sspaceex>

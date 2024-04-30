@@ -1,0 +1,18 @@
+property set EnvAADL is
+  
+  ContinuousDynamics: aadlstring applies to (system);
+  Sampling_Time: inherit Time_Range applies to (system);
+  Response_Time: inherit Time_Range applies to (system);
+  
+  Action: list of aadlinteger applies to (process,thread,system);
+
+  extInput: inherit aadlboolean applies to (data);
+  initvar: aadlstring applies to (thread,process,system);
+  env_var: aadlstring applies to (thread,system);
+  env_min: aadlstring applies to (thread,system);
+  env_max: aadlstring applies to (thread,system);
+  
+  isEnvironment: inherit aadlboolean applies to (system);
+  isController: inherit aadlboolean applies to (system,process, thread);
+  isPlant: inherit aadlboolean applies to (system);  
+end EnvAADL;

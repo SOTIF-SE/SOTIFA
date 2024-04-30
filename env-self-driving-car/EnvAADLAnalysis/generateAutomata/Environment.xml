@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sspaceex xmlns="http://www-verimag.imag.fr/xml-namespaces/sspaceex" version="0.2" math="SpaceEx">
+<component id="system">
+<param name="friction" type="real" local="false" d1="1" d2="1" dynamics="uncontrolled" />
+<param name="slope" type="real" local="false" d1="1" d2="1" dynamics="uncontrolled" />
+<param name="AeroDrag" type="real" local="false" d1="1" d2="1" dynamics="uncontrolled" />
+<param name="a_env" type="real" local="false" d1="1" d2="1" dynamics="uncontrolled" />
+<param name="RandomActorX_env" type="real" local="false" d1="1" d2="1" dynamics="uncontrolled" />
+<param name="RandomActorY_env" type="real" local="false" d1="1" d2="1" dynamics="uncontrolled" />
+<param name="signal_env" type="real" local="false" d1="1" d2="1" dynamics="uncontrolled" />
+<param name="err" type="real" local="false" d1="1" d2="1" dynamics="uncontrolled" />
+<param name="acc" type="real" local="false" d1="1" d2="1" dynamics="uncontrolled" />
+<param name="dec" type="real" local="false" d1="1" d2="1" dynamics="uncontrolled" />
+<param name="x_env" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="v_env" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="y_env" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="angle_env" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="theta_env" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="restrictedSignalAreaX_env" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="staticActorX_env" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="staticActorY_env" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="Mass" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="Length" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="Period" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="CRotInert" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="Amax" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="CRollResis" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+<param name="t" type="real" local="false" d1="1" d2="1" dynamics="controlled" />
+
+<location id="1" name="init3">
+<invariant>
+</invariant>
+<flow>
+t'=1   &amp;  x_env'=v_env   &amp;   v_env'=a_env  
+</flow>
+</location>
+
+
+</component>
+</sspaceex>
