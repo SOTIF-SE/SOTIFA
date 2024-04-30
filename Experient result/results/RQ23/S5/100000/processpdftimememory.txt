@@ -1,2 +1,0 @@
-process all 140pdf(Program1234... complete) time：3176677 ms
-process all 140pdf(Program1234... complete) memory：1656720 Byte
