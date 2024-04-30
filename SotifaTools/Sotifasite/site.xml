@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<site>
-   <feature url="features/Sotifa_1.0.0.202312081633.jar" id="Sotifa" version="1.0.0.202312081633">
-      <category name="Sotifa_category"/>
-   </feature>
-   <category-def name="Sotifa_category" label="Sotifa Category"/>
-</site>
