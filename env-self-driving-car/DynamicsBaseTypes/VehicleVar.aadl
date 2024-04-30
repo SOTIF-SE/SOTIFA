@@ -1,9 +1,0 @@
-property set VehicleVar is
-	 A: constant aadlreal => 1.0;
-	 Gamma: constant aadlreal => 0.1;
-	 alpha: constant aadlreal => 100.0; 
-	 headway: constant aadlreal => 1.5;
-	 Amax :  constant aadlreal => 6.0;
-	 cos : constant aadlreal => 1.000000;
-	 period : constant aadlreal => 10.0;
-end VehicleVar;
