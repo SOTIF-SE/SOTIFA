@@ -53,9 +53,8 @@ Import the `env-self-driving-car/` project or create your own.
 
 - The system consists of hybrid automata extracted from plant, controller, and environment components.
 
-- <img src="README.source/top+plant.jpg" alt="top+plant" style="zoom:20%;" />
-- <img src="README.source/tcontroller+env.jpg" alt="tcontroller+env" style="zoom:20%;" />
-<img src="README.source/tcontroller+env.jpg" alt="tcontroller+env" width="600px">
+- <img src="README.source/top+plant.jpg" alt="top+plant"  width="600px" />
+- <img src="README.source/tcontroller+env.jpg" alt="tcontroller+env" width="600px">
 
 
 - ##### Main components:
