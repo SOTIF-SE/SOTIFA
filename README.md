@@ -53,8 +53,8 @@ Import the `env-self-driving-car/` project or create your own.
 
 - The system consists of hybrid automata extracted from plant, controller, and environment components.
 
-- <img src="README.source/top+plant.jpg" alt="top+plant" style="zoom:66%;" />
-- <img src="README.source/tcontroller+env.jpg" alt="tcontroller+env" style="zoom:66%;" />
+- <img src="README.source/top+plant.jpg" alt="top+plant" style="zoom:20%;" />
+- <img src="README.source/tcontroller+env.jpg" alt="tcontroller+env" style="zoom:20%;" />
 
 - ##### Main components:
 - - **Plant Component**: Models the ego car’s dynamics with initial values (like `x_ego = 0`, `v_ego = 10`, `a_ego = 0`).
