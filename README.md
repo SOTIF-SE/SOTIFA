@@ -55,7 +55,7 @@ Import the `env-self-driving-car/` project or create your own.
 
 - <img src="README.source/top+plant.jpg" alt="top+plant" style="zoom:20%;" />
 - <img src="README.source/tcontroller+env.jpg" alt="tcontroller+env" style="zoom:20%;" />
-<img src="README.source/tcontroller+env.jpg" alt="tcontroller+env" width="2000px">
+<img src="README.source/tcontroller+env.jpg" alt="tcontroller+env" width="1200px">
 
 
 - ##### Main components:
