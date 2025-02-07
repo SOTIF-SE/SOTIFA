@@ -67,7 +67,7 @@ Import the `env-self-driving-car/` project or create your own.
  Run the assessment:
    - Click `SOTIFA` -> `SOTIF assessment under uncertain environment` to analyze risks.
 
-- <img src="README.source/tool interface.pdf" alt="interface" style="zoom:66%;" />
+- <img src="README.source/tool interface.jpg" alt="interface" style="zoom:66%;" />
 
 - The middle panel displays the EnvAADL model code for the ADS in the illustrated case (Sec. II-B). The assessment process begins with `SOTIFA` performing static checks to ensure EnvAADL syntax compliance. Users initiate the assessment by selecting `SOTIFA` → `SOTIF assessment under uncertain environment` at the top, prompting the tool to parse the `EnvAADL` file and update the right panel with the hazard analysis tree and the SOTIF risk score (Sec. VI). Upon running the assessment, an `EnvAADLAnalysis` folder is generated on the left, containing intermediate analysis files, including automata files extracted from `EnvAADL` (Sec. IV-B), EUCAs-based specification files (Sec. V), and final analysis results in the `analysisResults` folder, which contains the hazard analysis tree annotated with scores (Sec. VI).
 
