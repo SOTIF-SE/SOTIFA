@@ -1,0 +1,7 @@
+property set VehiclePhysics is
+	 Mass: aadlreal applies to (system);
+	 Length: aadlreal applies to (system);
+	 CRotInert: aadlreal applies to (system);
+     CRollResis: aadlreal applies to (system);
+     Amax: aadlreal applies to (system);
+end VehiclePhysics;

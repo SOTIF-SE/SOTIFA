@@ -1,0 +1,471 @@
+package ADSHighAggressive
+public
+
+	with Data_Model;
+	with Base_Types;
+	with EnvAADL;
+	with Dynamics_Types;
+	with VehiclePhysics;
+	with MathLib;
+
+	system ADSHighAggressive
+		properties
+			Period => 3 sec;
+			EnvAADL::Sampling_Time => 10ms .. 30ms;
+			EnvAADL::Response_Time => 40ms .. 60ms;
+			VehiclePhysics::Mass => 1500.0;
+			VehiclePhysics::Length => 2.0;
+			VehiclePhysics::CRotInert => 1.2;
+			VehiclePhysics::CRollResis => 0.015;
+			VehiclePhysics::Amax => 10.0;
+	end ADSHighAggressive;
+
+	system implementation ADSHighAggressive.impl
+		subcomponents
+			Env: system Environment.impl;
+			Plant: system Plant.impl;
+			Control: process ControlProcess.impl;
+		connections
+			C1s: port Env.Efriction -> Control.Efriction;
+			C2s: port Env.Eslope -> Control.Eslope;
+			C3s: port Env.EAeroDrag -> Control.EAeroDrag;
+			
+			C4s: port Env.Ex_env -> Control.Ex_env;
+			C5s: port Env.Ey_env -> Control.Ey_env;
+			C6s: port Env.Ev_env -> Control.Ev_env;
+			C7s: port Env.Ea_env -> Control.Ea_env;
+			C8s: port Env.Eangle_env -> Control.Eangle_env;
+			C9s: port Env.Etheta_env -> Control.Etheta_env;
+			C10s: port Env.EvehicleType_env -> Control.EvehicleType_env;--
+			
+			
+			C11s: port Env.ERandomActorX_env -> Control.ERandomActorX_env;
+			C12s: port Env.ERandomActorY_env -> Control.ERandomActorY_env;
+			
+			C13s: port Env.EstaticActorX_env -> Control.EstaticActorX_env;
+			C14s: port Env.EstaticActorY_env -> Control.EstaticActorY_env;
+			
+			C15s: port Env.ErestrictSignalAreaX_env -> Control.ErestrictSignalAreaX_env;
+			C16s: port Env.ESignal_env -> Control.ESignal_env;
+			
+			C17s: port Env.ErestrictRailCrossAreaXmin_env -> Control.ErestrictRailCrossAreaXmin_env;
+			C18s: port Env.ErestrictRailCrossAreaXmax_env -> Control.ErestrictRailCrossAreaXmax_env;
+			C19s: port Env.ErestrictRailCrossAreaYmin_env -> Control.ErestrictRailCrossAreaYmin_env;
+			C20s: port Env.ErestrictRailCrossAreaYmax_env -> Control.ErestrictRailCrossAreaYmax_env;
+			C21s: port Env.ErailSignal_env -> Control.ErailSignal_env;
+			
+			C22s: port Env.ErestrictParkAreaXmin_env -> Control.ErestrictParkAreaXmin_env;
+			C23s: port Env.ErestrictParkAreaXmax_env -> Control.ErestrictParkAreaXmax_env;
+			C24s: port Env.ErestrictParkAreaYmin_env -> Control.ErestrictParkAreaYmin_env;
+			C25s: port Env.ErestrictParkAreaYmax_env -> Control.ErestrictParkAreaYmax_env;
+			
+			C26s: port Env.ErestrictUturnAreaXmin_env -> Control.ErestrictUturnAreaXmin_env;
+			C27s: port Env.ErestrictUturnAreaXmax_env -> Control.ErestrictUturnAreaXmax_env;
+			C28s: port Env.ErestrictUturnAreaYmin_env -> Control.ErestrictUturnAreaYmin_env;
+			C29s: port Env.ErestrictUturnAreaYmax_env -> Control.ErestrictUturnAreaYmax_env;
+			
+			C30s: port Env.Eerr -> Control.Eerr;
+
+			C31s: port Plant.Ecurr_xego -> Control.Ecurr_xego;
+			C32s: port Plant.Ecurr_yego -> Control.Ecurr_yego;
+			C33s: port Plant.Ecurr_vego -> Control.Ecurr_vego;
+			
+			C34s: port Control.Econtl_aego -> Plant.Econtl_aego;
+			C35s: port Control.Econtl_thetaego -> Plant.Econtl_thetaego;
+			C36s: port Control.Econtl_angleego -> Plant.Econtl_angleego;
+
+
+	end ADSHighAggressive.impl;
+
+--we add--
+	system Environment
+		features
+			Efriction: out data port Dynamics_Types::dynamic;
+			Eslope: out data port Dynamics_Types::dynamic;
+			EAeroDrag: out data port Dynamics_Types::dynamic;
+			
+			Ex_env: out data port Dynamics_Types::dynamic;
+			Ey_env: out data port Dynamics_Types::dynamic;
+			Ev_env: out data port Dynamics_Types::dynamic;
+			Ea_env: out data port Dynamics_Types::dynamic;
+			Eangle_env: out data port Dynamics_Types::dynamic;
+			Etheta_env: out data port Dynamics_Types::dynamic;
+			EvehicleType_env: out data port Dynamics_Types::dynamic;------
+			
+			ERandomActorX_env: out data port Dynamics_Types::dynamic;
+			ERandomActorY_env: out data port Dynamics_Types::dynamic;
+			
+			EstaticActorX_env: out data port Dynamics_Types::static;
+			EstaticActorY_env: out data port Dynamics_Types::static;
+			
+			ErestrictSignalAreaX_env: out data port Dynamics_Types::static;
+			ESignal_env: out data port Dynamics_Types::dynamic;
+ 
+			ErestrictRailCrossAreaXmin_env: out data port Dynamics_Types::static;
+			ErestrictRailCrossAreaXmax_env: out data port Dynamics_Types::static;
+			ErestrictRailCrossAreaYmin_env: out data port Dynamics_Types::static;
+			ErestrictRailCrossAreaYmax_env: out data port Dynamics_Types::static;
+			ErailSignal_env: out data port Dynamics_Types::dynamic;
+			
+			ErestrictParkAreaXmin_env: out data port Dynamics_Types::static;
+			ErestrictParkAreaXmax_env: out data port Dynamics_Types::static;			
+			ErestrictParkAreaYmin_env: out data port Dynamics_Types::static;
+			ErestrictParkAreaYmax_env: out data port Dynamics_Types::static;
+			
+			ErestrictUturnAreaXmin_env: out data port Dynamics_Types::static;
+			ErestrictUturnAreaXmax_env: out data port Dynamics_Types::static;
+			ErestrictUturnAreaYmin_env: out data port Dynamics_Types::static;
+			ErestrictUturnAreaYmax_env: out data port Dynamics_Types::static;	
+			
+			Eerr: out data port Dynamics_Types::dynamic;		
+	
+		properties
+			EnvAADL::isEnvironment => true;
+	end Environment;
+
+	system implementation Environment.impl
+		subcomponents
+			--EnvFactors affect
+			friction: data Dynamics_Types::dynamic;
+			slope: data Dynamics_Types::dynamic;
+			AeroDrag: data Dynamics_Types::dynamic;
+			
+			restrictSignalAreaX_env: data Dynamics_Types::static {Data_Model::Initial_Value => ("50.0..50.0");};	
+			signal_env: data Dynamics_Types::dynamic {Data_Model::Real_Range => 0.0..1.0; };
+			
+			restrictRailCrossAreaXmin_env: data Dynamics_Types::static {Data_Model::Initial_Value => ("0.0..0.0");};
+			restrictRailCrossAreaXmax_env: data Dynamics_Types::static {Data_Model::Initial_Value => ("0.0..0.0");};
+			restrictRailCrossAreaYmin_env: data Dynamics_Types::static {Data_Model::Initial_Value => ("0.0..0.0");};
+			restrictRailCrossAreaYmax_env: data Dynamics_Types::static {Data_Model::Initial_Value => ("0.0..0.0");};
+			railSignal_env: data Dynamics_Types::dynamic {Data_Model::Real_Range => 0.0..1.0;};
+			
+			restrictParkAreaXmin_env: data Dynamics_Types::static {Data_Model::Initial_Value => ("0.0..0.0");};
+			restrictParkAreaXmax_env: data Dynamics_Types::static {Data_Model::Initial_Value => ("0.0..0.0");};
+			restrictParkAreaYmin_env: data Dynamics_Types::static {Data_Model::Initial_Value => ("0.0..0.0");};
+			restrictParkAreaYmax_env: data Dynamics_Types::static {Data_Model::Initial_Value => ("0.0..0.0");};
+			
+			restrictUturnAreaXmin_env: data Dynamics_Types::static {Data_Model::Initial_Value => ("0.0..0.0");};
+			restrictUturnAreaXmax_env: data Dynamics_Types::static {Data_Model::Initial_Value => ("0.0..0.0");};
+			restrictUturnAreaYmin_env: data Dynamics_Types::static {Data_Model::Initial_Value => ("0.0..0.0");};
+			restrictUturnAreaYmax_env: data Dynamics_Types::static {Data_Model::Initial_Value => ("0.0..0.0");};
+
+			--RuleBasedActors
+			x_env: data Dynamics_Types::dynamic {Data_Model::Real_Range => 50.0..50.0; };
+			y_env: data Dynamics_Types::dynamic {Data_Model::Real_Range => 0.01..0.01;};
+			v_env: data Dynamics_Types::dynamic {Data_Model::Real_Range => 5.0..5.0;};
+			a_env: data Dynamics_Types::dynamic {Data_Model::Real_Range => 0.0..0.0;};
+			angle_env: data Dynamics_Types::dynamic {Data_Model::Real_Range => 0.0..0.0;};
+			theta_env: data Dynamics_Types::dynamic {Data_Model::Real_Range => 0.0..0.0;};
+			vehicleType_env: data Dynamics_Types::dynamic {Data_Model::Real_Range => 0.0..0.0;};
+			
+			--RandomActors
+			RandomActorX_env: data Dynamics_Types::dynamic {Data_Model::Real_Range => 0.0..100.0; };
+			RandomActorY_env: data Dynamics_Types::dynamic {Data_Model::Real_Range => 0.0..100.0; };
+	
+			--StaticActors
+			staticActorX_env: data Dynamics_Types::static {Data_Model::Initial_Value => ("0.0..100.0");};
+			staticActorY_env: data Dynamics_Types::static {Data_Model::Initial_Value => ("0.0..100.0");};
+
+
+			--Other
+			err: data Dynamics_Types::dynamic {Data_Model::Real_Range => -1.0..1.0;};
+			
+
+		connections
+			C1e: port friction -> Efriction;
+			C2e: port slope -> Eslope;
+			C3e: port AeroDrag -> EAeroDrag;
+			
+			C4e: port x_env -> Ex_env;
+			C5e: port y_env -> Ey_env;
+			C6e: port v_env -> Ev_env;
+			C7e: port a_env -> Ea_env;
+			C8e: port angle_env -> Eangle_env;
+			C9e: port theta_env -> Etheta_env;
+			C10e: port vehicleType_env -> EvehicleType_env;
+			
+			C11e: port RandomActorX_env -> ERandomActorX_env;
+			C12e: port RandomActorY_env -> ERandomActorY_env;
+			
+			C13e: port staticActorX_env -> EstaticActorX_env;
+			C14e: port staticActorY_env -> EstaticActorY_env;
+			
+			C15e: port restrictSignalAreaX_env -> ErestrictSignalAreaX_env;
+			C16e: port signal_env -> ESignal_env;
+			
+			C17e: port restrictRailCrossAreaXmin_env -> ErestrictRailCrossAreaXmin_env;
+			C18e: port restrictRailCrossAreaXmax_env -> ErestrictRailCrossAreaXmax_env;
+			C19e: port restrictRailCrossAreaYmin_env -> ErestrictRailCrossAreaYmin_env;
+			C20e: port restrictRailCrossAreaYmax_env -> ErestrictRailCrossAreaYmax_env;
+			C21e: port railSignal_env -> ErailSignal_env;
+			
+			C22e: port restrictParkAreaXmin_env -> ErestrictParkAreaXmin_env;
+			C23e: port restrictParkAreaXmax_env -> ErestrictParkAreaXmax_env;
+			C24e: port restrictParkAreaYmin_env -> ErestrictParkAreaYmin_env;
+			C25e: port restrictParkAreaYmax_env -> ErestrictParkAreaYmax_env;
+			
+			C26e: port restrictUturnAreaXmin_env -> ErestrictUturnAreaXmin_env;
+			C27e: port restrictUturnAreaXmax_env -> ErestrictUturnAreaXmax_env;
+			C28e: port restrictUturnAreaYmin_env -> ErestrictUturnAreaYmin_env;
+			C29e: port restrictUturnAreaYmax_env -> ErestrictUturnAreaYmax_env;
+			
+			C30e: port err -> Eerr;
+
+		properties
+			--EnvAADL::ContinuousDynamics => "x_env'=v_env ; v_env'=a_env ;";
+			EnvAADL::ContinuousDynamics => "x_env'=cos(theta_env)*v_env ; y_env'=sin(theta_env)*v_env ; v_env'=a_env ; theta_env'=tan(angle_env)/Length*v_env ;";
+
+	end Environment.impl;
+	
+	
+	process ControlProcess
+		features
+			Efriction: in data port Dynamics_Types::dynamic;
+			Eslope: in data port Dynamics_Types::dynamic;
+			EAeroDrag: in data port Dynamics_Types::dynamic;
+			
+			Ex_env: in data port Dynamics_Types::dynamic;
+			Ey_env: in data port Dynamics_Types::dynamic;
+			Ev_env: in data port Dynamics_Types::dynamic;
+			Ea_env: in data port Dynamics_Types::dynamic;
+			Eangle_env: in data port Dynamics_Types::dynamic;
+			Etheta_env: in data port Dynamics_Types::dynamic;
+			EvehicleType_env: in data port Dynamics_Types::dynamic;
+			
+			ERandomActorX_env: in data port Dynamics_Types::dynamic;
+			ERandomActorY_env: in data port Dynamics_Types::dynamic;
+			
+			EstaticActorX_env: in data port Dynamics_Types::static;
+			EstaticActorY_env: in data port Dynamics_Types::static;
+			
+			ErestrictSignalAreaX_env: in data port Dynamics_Types::static;
+			ESignal_env: in data port Dynamics_Types::dynamic;
+			
+			ErestrictRailCrossAreaXmin_env: in data port Dynamics_Types::static;
+			ErestrictRailCrossAreaXmax_env: in data port Dynamics_Types::static;
+			ErestrictRailCrossAreaYmin_env: in data port Dynamics_Types::static;
+			ErestrictRailCrossAreaYmax_env: in data port Dynamics_Types::static;
+			ErailSignal_env: in data port Dynamics_Types::dynamic;
+			
+			ErestrictParkAreaXmin_env: in data port Dynamics_Types::static;
+			ErestrictParkAreaXmax_env: in data port Dynamics_Types::static;			
+			ErestrictParkAreaYmin_env: in data port Dynamics_Types::static;
+			ErestrictParkAreaYmax_env: in data port Dynamics_Types::static;
+			
+			ErestrictUturnAreaXmin_env: in data port Dynamics_Types::static;
+			ErestrictUturnAreaXmax_env: in data port Dynamics_Types::static;
+			ErestrictUturnAreaYmin_env: in data port Dynamics_Types::static;
+			ErestrictUturnAreaYmax_env: in data port Dynamics_Types::static;
+			
+			Eerr: in data port Dynamics_Types::dynamic;
+					
+			Ecurr_xego: in data port Base_Types::Float;
+			Ecurr_yego: in data port Base_Types::Float;
+			Ecurr_vego: in data port Base_Types::Float;
+
+
+			Econtl_aego: out data port Base_Types::Float;
+			Econtl_thetaego: out data port Base_Types::Float;
+			Econtl_angleego: out data port Base_Types::Float;
+	end ControlProcess;
+
+	process implementation ControlProcess.impl
+		subcomponents
+			ADSControllerHighAggressive: thread ADSControllerHighAggressive.impl;
+		connections
+			C1p: port Efriction -> ADSControllerHighAggressive.Efriction;
+			C2p: port Eslope -> ADSControllerHighAggressive.Eslope;
+			C3p: port EAeroDrag -> ADSControllerHighAggressive.EAeroDrag;
+			
+			C4p: port Ex_env -> ADSControllerHighAggressive.Ex_env;
+			C5p: port Ey_env -> ADSControllerHighAggressive.Ey_env;
+			C6p: port Ev_env -> ADSControllerHighAggressive.Ev_env;
+			C7p: port Ea_env -> ADSControllerHighAggressive.Ea_env;
+			C8p: port Eangle_env -> ADSControllerHighAggressive.Eangle_env;
+			C9p: port Etheta_env -> ADSControllerHighAggressive.Etheta_env;
+			C10p: port EvehicleType_env -> ADSControllerHighAggressive.EvehicleType_env;
+			
+			
+			C11p: port ERandomActorX_env -> ADSControllerHighAggressive.ERandomActorX_env;
+			C12p: port ERandomActorY_env -> ADSControllerHighAggressive.ERandomActorY_env;
+			
+			C13p: port EstaticActorX_env -> ADSControllerHighAggressive.EstaticActorX_env;
+			C14p: port EstaticActorY_env -> ADSControllerHighAggressive.EstaticActorY_env;
+			
+			C15p: port ErestrictSignalAreaX_env -> ADSControllerHighAggressive.ErestrictSignalAreaX_env;
+			C16p: port ESignal_env -> ADSControllerHighAggressive.ESignal_env;
+			
+            C17p: port ErestrictRailCrossAreaXmin_env -> ADSControllerHighAggressive.ErestrictRailCrossAreaXmin_env;
+			C18p: port ErestrictRailCrossAreaXmax_env -> ADSControllerHighAggressive.ErestrictRailCrossAreaXmax_env;
+			C19p: port ErestrictRailCrossAreaYmin_env -> ADSControllerHighAggressive.ErestrictRailCrossAreaYmin_env;
+			C20p: port ErestrictRailCrossAreaYmax_env -> ADSControllerHighAggressive.ErestrictRailCrossAreaYmax_env;
+			C21p: port ErailSignal_env -> ADSControllerHighAggressive.ErailSignal_env;
+			
+			C22p: port ErestrictParkAreaXmin_env -> ADSControllerHighAggressive.ErestrictParkAreaXmin_env;
+			C23p: port ErestrictParkAreaXmax_env -> ADSControllerHighAggressive.ErestrictParkAreaXmax_env;
+			C24p: port ErestrictParkAreaYmin_env -> ADSControllerHighAggressive.ErestrictParkAreaYmin_env;
+			C25p: port ErestrictParkAreaYmax_env -> ADSControllerHighAggressive.ErestrictParkAreaYmax_env;
+			
+			C26p: port ErestrictUturnAreaXmin_env -> ADSControllerHighAggressive.ErestrictUturnAreaXmin_env;
+			C27p: port ErestrictUturnAreaXmax_env -> ADSControllerHighAggressive.ErestrictUturnAreaXmax_env;
+			C28p: port ErestrictUturnAreaYmin_env -> ADSControllerHighAggressive.ErestrictUturnAreaYmin_env;
+			C29p: port ErestrictUturnAreaYmax_env -> ADSControllerHighAggressive.ErestrictUturnAreaYmax_env;
+			
+			C30p: port Eerr -> ADSControllerHighAggressive.Eerr;
+
+			C31p: port Ecurr_xego -> ADSControllerHighAggressive.Ecurr_xego;
+			C32p: port Ecurr_yego -> ADSControllerHighAggressive.Ecurr_yego;
+			C33p: port Ecurr_vego -> ADSControllerHighAggressive.Ecurr_vego;
+			
+			C34p: port ADSControllerHighAggressive.Econtl_aego -> Econtl_aego;
+			C35p: port ADSControllerHighAggressive.Econtl_thetaego -> Econtl_thetaego;
+			C36p: port ADSControllerHighAggressive.Econtl_angleego -> Econtl_angleego;
+	end ControlProcess.impl;
+	
+	
+
+	thread ADSControllerHighAggressive
+		features
+			Efriction: in data port Dynamics_Types::dynamic;
+			Eslope: in data port Dynamics_Types::dynamic;
+			EAeroDrag: in data port Dynamics_Types::dynamic;
+			
+			Ex_env: in data port Dynamics_Types::dynamic;
+			Ey_env: in data port Dynamics_Types::dynamic;
+			Ev_env: in data port Dynamics_Types::dynamic;
+			Ea_env: in data port Dynamics_Types::dynamic;
+			Eangle_env: in data port Dynamics_Types::dynamic;
+			Etheta_env: in data port Dynamics_Types::dynamic;
+			EvehicleType_env: in data port Dynamics_Types::dynamic;
+			
+			ERandomActorX_env: in data port Dynamics_Types::dynamic;
+			ERandomActorY_env: in data port Dynamics_Types::dynamic;
+			
+			EstaticActorX_env: in data port Dynamics_Types::static;
+			EstaticActorY_env: in data port Dynamics_Types::static;
+			
+			ErestrictSignalAreaX_env: in data port Dynamics_Types::static;
+			ESignal_env: in data port Dynamics_Types::dynamic;
+			
+			ErestrictRailCrossAreaXmin_env: in data port Dynamics_Types::static;
+			ErestrictRailCrossAreaXmax_env: in data port Dynamics_Types::static;
+			ErestrictRailCrossAreaYmin_env: in data port Dynamics_Types::static;
+			ErestrictRailCrossAreaYmax_env: in data port Dynamics_Types::static;
+			ErailSignal_env: in data port Dynamics_Types::dynamic;
+			
+			ErestrictParkAreaXmin_env: in data port Dynamics_Types::static;
+			ErestrictParkAreaXmax_env: in data port Dynamics_Types::static;			
+			ErestrictParkAreaYmin_env: in data port Dynamics_Types::static;
+			ErestrictParkAreaYmax_env: in data port Dynamics_Types::static;
+			
+			ErestrictUturnAreaXmin_env: in data port Dynamics_Types::static;
+			ErestrictUturnAreaXmax_env: in data port Dynamics_Types::static;
+			ErestrictUturnAreaYmin_env: in data port Dynamics_Types::static;
+			ErestrictUturnAreaYmax_env: in data port Dynamics_Types::static;
+			
+			Eerr: in data port Dynamics_Types::dynamic;
+					
+			Ecurr_xego: in data port Base_Types::Float;
+			Ecurr_yego: in event data port Base_Types::Float;
+			Ecurr_vego: in data port Base_Types::Float;
+
+
+			Econtl_aego: out data port Base_Types::Float;
+			Econtl_thetaego: out data port Base_Types::Float;
+			Econtl_angleego: out data port Base_Types::Float;
+		properties
+			Dispatch_Protocol => Periodic;
+			EnvAADL::isController => true;
+	end ADSControllerHighAggressive;
+
+	thread implementation ADSControllerHighAggressive.impl
+		subcomponents
+			--action
+			action: data Base_Types::Float {Data_Model::Real_Range => 0.0..0.0;};			
+			
+			danger: data Base_Types::Float {Data_Model::Real_Range => 0.0..0.0;};
+			
+			acc: data Dynamics_Types::dynamic {Data_Model::Real_Range => 20.0..30.0;};
+			dec: data Dynamics_Types::dynamic {Data_Model::Real_Range => -8.0..-4.0;};
+		properties
+			EnvAADL::Action => (-1, 1);
+
+		annex behavior_specification {**variables
+            cos_slope : Base_Types::Float ;
+            contl_aego : Base_Types::Float;
+            dd: Base_Types::Float;
+            
+          states
+            initstate : initial complete state;
+            waitADSHighAggressivecontrol : state;
+            ADSHighAggressiveactuate : state;
+          transitions
+            initstate -[on dispatch]-> waitADSHighAggressiveControl;
+            waitADSHighAggressivecontrol -[]-> ADSHighAggressiveactuate {
+              MathLib::cos ! (Eslope, cos_slope);
+              dd := (Ex_env - Ecurr_xego + Eerr);      
+              
+              if (dd > 10)
+                contl_aego := acc - 10 * 0.01 * Efriction * cos_slope
+              else
+                contl_aego := dec - 10 * 0.01 * Efriction * cos_slope
+              end if;
+              
+              Econtl_aego := contl_aego;
+              
+              if (contl_aego > 0)
+                action := 1
+              elsif (contl_aego < 0)
+                action := -1
+              else
+                action := 0
+              end if
+              
+            };
+            ADSHighAggressiveactuate -[]-> initstate;
+        **};
+
+	end ADSControllerHighAggressive.impl;
+	
+	----------------------------------------------------------------
+--------------------- Plant ------------------------
+----------------------------------------------------------------
+	system Plant
+		features
+			Ecurr_xego: out data port Base_Types::Float;
+			Ecurr_yego: out data port Base_Types::Float;
+			Ecurr_vego: out data port Base_Types::Float;
+
+			Econtl_aego: in data port Base_Types::Float;
+			Econtl_thetaego: in data port Base_Types::Float;
+			Econtl_angleego: in data port Base_Types::Float;
+		properties
+			EnvAADL::isPlant => true;
+
+	end Plant;
+
+	
+	system implementation Plant.impl
+		subcomponents
+			x_ego: data Base_Types::Float {Data_Model::Real_Range => 0.0..0.0; };
+			y_ego: data Base_Types::Float {Data_Model::Real_Range => 0.0..0.0; };
+			v_ego: data Base_Types::Float {Data_Model::Real_Range => 10.0..10.0; };
+			a_ego: data Base_Types::Float {Data_Model::Real_Range => 0.0..0.0; };
+			theta_ego: data Base_Types::Float {Data_Model::Real_Range => 0.0..0.0; };
+			angle_ego: data Base_Types::Float {Data_Model::Real_Range => 0.0..0.0; };
+
+		connections
+			C1plant: port x_ego -> Ecurr_xego;
+			C2plant: port y_ego -> Ecurr_yego;
+			C3plant: port v_ego -> Ecurr_vego;
+			C4plant: port Econtl_aego -> a_ego;
+			C5plant: port Econtl_thetaego -> theta_ego;	
+			C6plant: port Econtl_angleego -> angle_ego;
+
+		properties
+			--EnvAADL::ContinuousDynamics => "x_ego'=v_ego;v_ego'=a_ego;";
+			EnvAADL::ContinuousDynamics => "x_ego'=cos(theta_ego)*v_ego; y_ego'=sin(theta_ego)*v_ego;v_ego'=a_ego;theta_ego'=tan(angle_ego)/Length*v_ego;";
+	end Plant.impl;
+	
+
+end ADSHighAggressive;

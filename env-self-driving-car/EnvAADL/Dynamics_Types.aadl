@@ -1,0 +1,17 @@
+package Dynamics_Types
+public
+
+  with Data_Model;
+
+ data static
+  properties 
+    Data_Model::Data_Representation => Float;
+ end static;
+ 
+ data dynamic
+  properties 
+    Data_Model::Data_Representation => Float;
+ end dynamic;
+
+
+end Dynamics_Types;

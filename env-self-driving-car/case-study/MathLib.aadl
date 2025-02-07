@@ -1,0 +1,41 @@
+package MathLib
+public
+	with Base_Types;
+	
+	subprogram sqrt
+		features
+			input : in parameter Base_Types::Float; output : out parameter Base_Types::Float;
+	end sqrt;
+	
+	subprogram sin
+		features
+			input : in parameter Base_Types::Float; output : out parameter Base_Types::Float;
+	end sin;
+	
+	subprogram cos
+		features
+			input : in parameter Base_Types::Float; output : out parameter Base_Types::Float;
+	end cos;
+	
+	subprogram tan
+		features
+			input : in parameter Base_Types::Float; output : out parameter Base_Types::Float;
+	end tan;
+	
+	subprogram log
+		features
+			input : in parameter Base_Types::Float; output : out parameter Base_Types::Float;
+	end log;
+	
+	subprogram angle
+		features
+			input : in parameter Base_Types::Float; output : out parameter Base_Types::Float;
+	end angle;
+	
+	subprogram min
+	features
+		arg1 : in parameter Base_Types::Float; arg2 : in parameter Base_Types::Float;
+		output : out parameter Base_Types::Float;
+	end min;
+
+end MathLib;

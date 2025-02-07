@@ -1,0 +1,2358 @@
+<?xml version="1.0" encoding="ASCII"?>
+<aadl2:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:aadlba="https://github.com/osate/osate2-ba.git/aadlba" name="ADSLowAggressive" publicSection="//@ownedPublicSection">
+  <ownedPublicSection>
+    <ownedClassifier xsi:type="aadl2:SystemType" name="ADSLowAggressive">
+      <ownedPropertyAssociation>
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="3">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.4"/>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation>
+        <property href="DynamicsBaseTypes/EnvAADL.aadl#EnvAADL.Sampling_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="10">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="30">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation>
+        <property href="DynamicsBaseTypes/EnvAADL.aadl#EnvAADL.Response_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="40">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="60">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation>
+        <property href="DynamicsBaseTypes/VehiclePhysics.aadl#VehiclePhysics.Mass"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="1500.0"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation>
+        <property href="DynamicsBaseTypes/VehiclePhysics.aadl#VehiclePhysics.Length"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="2.0"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation>
+        <property href="DynamicsBaseTypes/VehiclePhysics.aadl#VehiclePhysics.CRotInert"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="1.2"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation>
+        <property href="DynamicsBaseTypes/VehiclePhysics.aadl#VehiclePhysics.CRollResis"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.015"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation>
+        <property href="DynamicsBaseTypes/VehiclePhysics.aadl#VehiclePhysics.Amax"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="10.0"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:SystemImplementation" name="ADSLowAggressive.impl">
+      <ownedRealization implemented="//@ownedPublicSection/@ownedClassifier.0"/>
+      <ownedPortConnection name="C1s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.0"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.0"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C2s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.1"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.1"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C3s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.2"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.2"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C4s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.3"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.3"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C5s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.4"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.4"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C6s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.5"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.5"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C7s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.6"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.6"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C8s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.7"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.7"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C9s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.8"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.8"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C10s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.9"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.9"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C11s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.10"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.10"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C12s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.11"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.11"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C13s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.12"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.12"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C14s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.13"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.13"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C15s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.14"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.14"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C16s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.15"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.15"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C17s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.16"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.16"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C18s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.17"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.17"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C19s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.18"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.18"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C20s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.19"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.19"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C21s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.20"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.20"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C22s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.21"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.21"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C23s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.22"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.22"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C24s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.23"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.23"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C25s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.24"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.24"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C26s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.25"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.25"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C27s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.26"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.26"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C28s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.27"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.27"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C29s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.28"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.28"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C30s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.29"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.29"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C31s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.30"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.1" connectionEnd="//@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.0"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C32s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.31"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.1" connectionEnd="//@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.1"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C33s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.32"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.1" connectionEnd="//@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.2"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C34s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.1" connectionEnd="//@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.3"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.33"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C35s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.1" connectionEnd="//@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.4"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.34"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C36s">
+        <destination context="//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.1" connectionEnd="//@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.5"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.35"/>
+      </ownedPortConnection>
+      <ownedProcessSubcomponent name="Control" processSubcomponentType="//@ownedPublicSection/@ownedClassifier.5"/>
+      <ownedSystemSubcomponent name="Env" systemSubcomponentType="//@ownedPublicSection/@ownedClassifier.3"/>
+      <ownedSystemSubcomponent name="Plant" systemSubcomponentType="//@ownedPublicSection/@ownedClassifier.9"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:SystemType" name="Environment">
+      <ownedPropertyAssociation>
+        <property href="DynamicsBaseTypes/EnvAADL.aadl#EnvAADL.isEnvironment"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedDataPort name="Efriction" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Eslope" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="EAeroDrag" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ex_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ey_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ev_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ea_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Eangle_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Etheta_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="EvehicleType_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="ERandomActorX_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="ERandomActorY_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="EstaticActorX_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="EstaticActorY_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictSignalAreaX_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ESignal_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictRailCrossAreaXmin_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictRailCrossAreaXmax_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictRailCrossAreaYmin_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictRailCrossAreaYmax_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErailSignal_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictParkAreaXmin_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictParkAreaXmax_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictParkAreaYmin_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictParkAreaYmax_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictUturnAreaXmin_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictUturnAreaXmax_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictUturnAreaYmin_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictUturnAreaYmax_env" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="Eerr" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:SystemImplementation" name="Environment.impl">
+      <ownedPropertyAssociation>
+        <property href="DynamicsBaseTypes/EnvAADL.aadl#EnvAADL.ContinuousDynamics"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:StringLiteral" value="x_env'=cos(theta_env)*v_env ; y_env'=sin(theta_env)*v_env ; v_env'=a_env ; theta_env'=tan(angle_env)/Length*v_env ;"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedRealization implemented="//@ownedPublicSection/@ownedClassifier.2"/>
+      <ownedPortConnection name="C1e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.0"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.0"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C2e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.1"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.1"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C3e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.2"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.2"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C4e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.3"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.18"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C5e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.4"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.19"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C6e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.5"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.20"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C7e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.6"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.21"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C8e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.7"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.22"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C9e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.8"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.23"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C10e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.9"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.24"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C11e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.10"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.25"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C12e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.11"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.26"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C13e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.12"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.27"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C14e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.13"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.28"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C15e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.14"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.3"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C16e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.15"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.4"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C17e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.16"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.5"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C18e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.17"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.6"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C19e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.18"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.7"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C20e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.19"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.8"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C21e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.20"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.9"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C22e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.21"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.10"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C23e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.22"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.11"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C24e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.23"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.12"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C25e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.24"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.13"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C26e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.25"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.14"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C27e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.26"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.15"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C28e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.27"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.16"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C29e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.28"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.17"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C30e">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.29"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.3/@ownedDataSubcomponent.29"/>
+      </ownedPortConnection>
+      <ownedDataSubcomponent name="friction">
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="slope">
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="AeroDrag">
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="restrictSignalAreaX_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Initial_Value"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="50.0..50.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="signal_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral"/>
+              <maximum xsi:type="aadl2:RealLiteral" value="1.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="restrictRailCrossAreaXmin_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Initial_Value"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="0.0..0.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="restrictRailCrossAreaXmax_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Initial_Value"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="0.0..0.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="restrictRailCrossAreaYmin_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Initial_Value"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="0.0..0.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="restrictRailCrossAreaYmax_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Initial_Value"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="0.0..0.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="railSignal_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral"/>
+              <maximum xsi:type="aadl2:RealLiteral" value="1.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="restrictParkAreaXmin_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Initial_Value"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="0.0..0.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="restrictParkAreaXmax_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Initial_Value"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="0.0..0.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="restrictParkAreaYmin_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Initial_Value"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="0.0..0.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="restrictParkAreaYmax_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Initial_Value"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="0.0..0.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="restrictUturnAreaXmin_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Initial_Value"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="0.0..0.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="restrictUturnAreaXmax_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Initial_Value"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="0.0..0.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="restrictUturnAreaYmin_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Initial_Value"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="0.0..0.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="restrictUturnAreaYmax_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Initial_Value"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="0.0..0.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="x_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral" value="50.0"/>
+              <maximum xsi:type="aadl2:RealLiteral" value="50.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="y_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral" value="0.01"/>
+              <maximum xsi:type="aadl2:RealLiteral" value="0.01"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="v_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral" value="5.0"/>
+              <maximum xsi:type="aadl2:RealLiteral" value="5.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="a_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral"/>
+              <maximum xsi:type="aadl2:RealLiteral"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="angle_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral"/>
+              <maximum xsi:type="aadl2:RealLiteral"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="theta_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral"/>
+              <maximum xsi:type="aadl2:RealLiteral"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="vehicleType_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral"/>
+              <maximum xsi:type="aadl2:RealLiteral"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="RandomActorX_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral"/>
+              <maximum xsi:type="aadl2:RealLiteral" value="100.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="RandomActorY_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral"/>
+              <maximum xsi:type="aadl2:RealLiteral" value="100.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="staticActorX_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Initial_Value"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="0.0..100.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="staticActorY_env">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Initial_Value"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="0.0..100.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="err">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral" value="-1.0"/>
+              <maximum xsi:type="aadl2:RealLiteral" value="1.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataSubcomponent>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ProcessType" name="ControlProcess">
+      <ownedDataPort name="Efriction" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Eslope" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="EAeroDrag" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ex_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ey_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ev_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ea_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Eangle_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Etheta_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="EvehicleType_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="ERandomActorX_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="ERandomActorY_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="EstaticActorX_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="EstaticActorY_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictSignalAreaX_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ESignal_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictRailCrossAreaXmin_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictRailCrossAreaXmax_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictRailCrossAreaYmin_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictRailCrossAreaYmax_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErailSignal_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictParkAreaXmin_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictParkAreaXmax_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictParkAreaYmin_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictParkAreaYmax_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictUturnAreaXmin_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictUturnAreaXmax_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictUturnAreaYmin_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictUturnAreaYmax_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="Eerr" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ecurr_xego" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ecurr_yego" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ecurr_vego" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataPort>
+      <ownedDataPort name="Econtl_aego" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataPort>
+      <ownedDataPort name="Econtl_thetaego" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataPort>
+      <ownedDataPort name="Econtl_angleego" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataPort>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ProcessImplementation" name="ControlProcess.impl">
+      <ownedRealization implemented="//@ownedPublicSection/@ownedClassifier.4"/>
+      <ownedPortConnection name="C1p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.0"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.0"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C2p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.1"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.1"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C3p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.2"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.2"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C4p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.3"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.3"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C5p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.4"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.4"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C6p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.5"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.5"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C7p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.6"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.6"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C8p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.7"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.7"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C9p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.8"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.8"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C10p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.9"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.9"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C11p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.10"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.10"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C12p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.11"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.11"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C13p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.12"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.12"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C14p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.13"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.13"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C15p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.14"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.14"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C16p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.15"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.15"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C17p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.16"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.16"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C18p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.17"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.17"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C19p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.18"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.18"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C20p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.19"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.19"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C21p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.20"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.20"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C22p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.21"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.21"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C23p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.22"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.22"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C24p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.23"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.23"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C25p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.24"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.24"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C26p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.25"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.25"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C27p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.26"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.26"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C28p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.27"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.27"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C29p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.28"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.28"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C30p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.29"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.29"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C31p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.30"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.30"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C32p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedEventDataPort.0"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.31"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C33p">
+        <destination context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.31"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.32"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C34p">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.33"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.32"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C35p">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.34"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.33"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C36p">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.35"/>
+        <source context="//@ownedPublicSection/@ownedClassifier.5/@ownedThreadSubcomponent.0" connectionEnd="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.34"/>
+      </ownedPortConnection>
+      <ownedThreadSubcomponent name="ADSControllerLowAggressive" threadSubcomponentType="//@ownedPublicSection/@ownedClassifier.7"/>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadType" name="ADSControllerLowAggressive">
+      <ownedPropertyAssociation>
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation>
+        <property href="DynamicsBaseTypes/EnvAADL.aadl#EnvAADL.isController"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedDataPort name="Efriction" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Eslope" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="EAeroDrag" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ex_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ey_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ev_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ea_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Eangle_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Etheta_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="EvehicleType_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="ERandomActorX_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="ERandomActorY_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="EstaticActorX_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="EstaticActorY_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictSignalAreaX_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ESignal_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictRailCrossAreaXmin_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictRailCrossAreaXmax_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictRailCrossAreaYmin_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictRailCrossAreaYmax_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErailSignal_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictParkAreaXmin_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictParkAreaXmax_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictParkAreaYmin_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictParkAreaYmax_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictUturnAreaXmin_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictUturnAreaXmax_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictUturnAreaYmin_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="ErestrictUturnAreaYmax_env" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.static"/>
+      </ownedDataPort>
+      <ownedDataPort name="Eerr" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types.dynamic"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ecurr_xego" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ecurr_vego" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataPort>
+      <ownedDataPort name="Econtl_aego" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataPort>
+      <ownedDataPort name="Econtl_thetaego" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataPort>
+      <ownedDataPort name="Econtl_angleego" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataPort>
+      <ownedEventDataPort name="Ecurr_yego" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedEventDataPort>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:ThreadImplementation" name="ADSControllerLowAggressive.impl">
+      <ownedPropertyAssociation>
+        <property href="DynamicsBaseTypes/EnvAADL.aadl#EnvAADL.Action"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:IntegerLiteral" value="-1"/>
+            <ownedListElement xsi:type="aadl2:IntegerLiteral" value="1"/>
+          </ownedValue>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedAnnexSubclause xsi:type="aadl2:DefaultAnnexSubclause" name="behavior_specification" sourceText="{**variables&#xD;&#xA;            cos_slope : Base_Types::Float;&#xD;&#xA;            dd: Base_Types::Float;&#xD;&#xA;            contl_aego : Base_Types::Float;&#xD;&#xA;          states&#xD;&#xA;            initstate : initial complete state;&#xD;&#xA;            waitADSLowAggressivecontrol : state;&#xD;&#xA;            ADSLowAggressiveactuate : state;&#xD;&#xA;          transitions&#xD;&#xA;            initstate -[on dispatch]-> waitADSLowAggressiveControl;&#xD;&#xA;            waitADSLowAggressivecontrol -[]-> ADSLowAggressiveactuate {&#xD;&#xA;              MathLib::cos ! (Eslope, cos_slope);&#xD;&#xA;              dd := (Ex_env - Ecurr_xego + Eerr);&#xD;&#xA;              &#xD;&#xA;              if (abs (EstaticActorX_env - Ecurr_xego) &lt; 0.5 and abs (EstaticActorY_env - Ecurr_yego) &lt; 0.5)&#xD;&#xA;                danger := 1&#xD;&#xA;              elsif (abs (ERandomActorX_env - Ecurr_xego) &lt; 0.5 and abs (ERandomActorY_env - Ecurr_yego) &lt; 0.5)&#xD;&#xA;                danger := 1&#xD;&#xA;              elsif (abs (ErestrictSignalAreaX_env - Ecurr_xego) &lt; 0.5 and ESignal_env > 0.5)&#xD;&#xA;                danger := 1&#xD;&#xA;              elsif ((abs (ErestrictRailCrossAreaXmin_env - Ecurr_xego) &lt; 0.5 or abs (ErestrictRailCrossAreaXmax_env - Ecurr_xego) &lt; 0.5 or abs (ErestrictRailCrossAreaYmin_env - Ecurr_yego) &lt; 0.5 or abs (ErestrictRailCrossAreaYmax_env - Ecurr_yego) &lt; 0.5) and ErailSignal_env > 0.5)&#xD;&#xA;&#x9;&#x9;&#x9;    danger := 1&#xD;&#xA;&#x9;&#x9;&#x9;  elsif (abs (ErestrictParkAreaXmin_env - Ecurr_xego) &lt; 0.5 or abs (ErestrictParkAreaXmax_env - Ecurr_xego) &lt; 0.5 or abs (ErestrictParkAreaYmin_env - Ecurr_yego) &lt; 0.5 or abs (ErestrictParkAreaYmax_env - Ecurr_yego) &lt; 0.5)&#xD;&#xA;&#x9;&#x9;&#x9;    danger := 1&#xD;&#xA;&#x9;&#x9;&#x9;  elsif (abs (ErestrictUturnAreaXmin_env - Ecurr_xego) &lt; 0.5 or abs (ErestrictUturnAreaXmax_env - Ecurr_xego) &lt; 0.5 or abs (ErestrictUturnAreaYmin_env - Ecurr_yego) &lt; 0.5 or abs (ErestrictUturnAreaYmax_env - Ecurr_yego) &lt; 0.5)&#xD;&#xA;&#x9;&#x9;&#x9;    danger := 1&#xD;&#xA;&#x9;&#x9;&#x9;  else&#xD;&#xA;&#x9;&#x9;&#x9;    danger := 0&#xD;&#xA;&#x9;&#x9;&#x9;  end if;&#xD;&#xA;              &#xD;&#xA;              if (danger > 0)&#xD;&#xA;                contl_aego := -3 - 10 * 0.01 * Efriction * cos_slope&#xD;&#xA;              elsif (dd > 30)&#xD;&#xA;                contl_aego := 3 - 10 * 0.01 * Efriction * cos_slope&#xD;&#xA;              else&#xD;&#xA;                contl_aego := -3 - 10 * 0.01 * Efriction * cos_slope&#xD;&#xA;              end if;&#xD;&#xA;              &#xD;&#xA;              Econtl_aego := contl_aego;&#xD;&#xA;              &#xD;&#xA;             if (contl_aego > 0)&#xD;&#xA;                action := 1&#xD;&#xA;              elsif (contl_aego &lt; 0)&#xD;&#xA;                action := -1&#xD;&#xA;              else&#xD;&#xA;                action := 0&#xD;&#xA;              end if&#xD;&#xA;              &#xD;&#xA;            };&#xD;&#xA;            ADSLowAggressiveactuate -[]-> initstate;&#xD;&#xA;        **}">
+        <parsedAnnexSubclause xsi:type="aadlba:BehaviorAnnex" name="behavior_specification" initialState="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@states.0">
+          <variables name="cos_slope">
+            <dataClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+          </variables>
+          <variables name="dd">
+            <dataClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+          </variables>
+          <variables name="contl_aego">
+            <dataClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+          </variables>
+          <states name="initstate" initial="true" complete="true" incomingTransitions="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@transitions.2" outgoingTransitions="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@transitions.0"/>
+          <states name="waitADSLowAggressivecontrol" incomingTransitions="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@transitions.0" outgoingTransitions="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@transitions.1"/>
+          <states name="ADSLowAggressiveactuate" incomingTransitions="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@transitions.1" outgoingTransitions="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@transitions.2"/>
+          <transitions sourceState="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@states.0" destinationState="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@states.1">
+            <condition xsi:type="aadlba:DispatchCondition"/>
+          </transitions>
+          <transitions sourceState="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@states.1" destinationState="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@states.2" actionBlock="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@actions.0"/>
+          <transitions sourceState="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@states.2" destinationState="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@states.0"/>
+          <actions>
+            <content xsi:type="aadlba:BehaviorActionSequence">
+              <actions xsi:type="aadlba:SubprogramCallAction">
+                <subprogram xsi:type="aadlba:SubprogramHolder">
+                  <element xsi:type="aadl2:SubprogramType" href="case-study/MathLib.aadl#MathLib.cos"/>
+                </subprogram>
+                <parameterLabels xsi:type="aadlba:ValueExpression">
+                  <relations>
+                    <firstExpression>
+                      <terms>
+                        <factors>
+                          <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.1"/>
+                        </factors>
+                      </terms>
+                    </firstExpression>
+                  </relations>
+                </parameterLabels>
+                <parameterLabels xsi:type="aadlba:BehaviorVariableHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@variables.0"/>
+              </actions>
+              <actions xsi:type="aadlba:AssignmentAction">
+                <target xsi:type="aadlba:BehaviorVariableHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@variables.1"/>
+                <valueExpression>
+                  <relations>
+                    <firstExpression>
+                      <terms>
+                        <factors>
+                          <firstValue xsi:type="aadlba:ValueExpression">
+                            <relations>
+                              <firstExpression>
+                                <terms>
+                                  <factors>
+                                    <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.3"/>
+                                  </factors>
+                                </terms>
+                                <terms>
+                                  <factors>
+                                    <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.30"/>
+                                  </factors>
+                                </terms>
+                                <terms>
+                                  <factors>
+                                    <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.29"/>
+                                  </factors>
+                                </terms>
+                                <binaryAddingOperators>-</binaryAddingOperators>
+                                <binaryAddingOperators>+</binaryAddingOperators>
+                              </firstExpression>
+                            </relations>
+                          </firstValue>
+                        </factors>
+                      </terms>
+                    </firstExpression>
+                  </relations>
+                </valueExpression>
+              </actions>
+              <actions xsi:type="aadlba:IfStatement">
+                <behaviorActions xsi:type="aadlba:AssignmentAction">
+                  <target xsi:type="aadlba:DataSubcomponentHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedDataSubcomponent.1"/>
+                  <valueExpression>
+                    <relations>
+                      <firstExpression>
+                        <terms>
+                          <factors>
+                            <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10" value="1"/>
+                          </factors>
+                        </terms>
+                      </firstExpression>
+                    </relations>
+                  </valueExpression>
+                </behaviorActions>
+                <logicalValueExpression>
+                  <relations relationalOperator="&lt;">
+                    <firstExpression>
+                      <terms>
+                        <factors unaryNumericOperator="abs">
+                          <firstValue xsi:type="aadlba:ValueExpression">
+                            <relations>
+                              <firstExpression>
+                                <terms>
+                                  <factors>
+                                    <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.12"/>
+                                  </factors>
+                                </terms>
+                                <terms>
+                                  <factors>
+                                    <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.30"/>
+                                  </factors>
+                                </terms>
+                                <binaryAddingOperators>-</binaryAddingOperators>
+                              </firstExpression>
+                            </relations>
+                          </firstValue>
+                        </factors>
+                      </terms>
+                    </firstExpression>
+                    <secondExpression>
+                      <terms>
+                        <factors>
+                          <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                        </factors>
+                      </terms>
+                    </secondExpression>
+                  </relations>
+                  <relations relationalOperator="&lt;">
+                    <firstExpression>
+                      <terms>
+                        <factors unaryNumericOperator="abs">
+                          <firstValue xsi:type="aadlba:ValueExpression">
+                            <relations>
+                              <firstExpression>
+                                <terms>
+                                  <factors>
+                                    <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.13"/>
+                                  </factors>
+                                </terms>
+                                <terms>
+                                  <factors>
+                                    <firstValue xsi:type="aadlba:EventDataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedEventDataPort.0"/>
+                                  </factors>
+                                </terms>
+                                <binaryAddingOperators>-</binaryAddingOperators>
+                              </firstExpression>
+                            </relations>
+                          </firstValue>
+                        </factors>
+                      </terms>
+                    </firstExpression>
+                    <secondExpression>
+                      <terms>
+                        <factors>
+                          <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                        </factors>
+                      </terms>
+                    </secondExpression>
+                  </relations>
+                  <logicalOperators>and</logicalOperators>
+                </logicalValueExpression>
+                <elseStatement xsi:type="aadlba:IfStatement" elif="true">
+                  <behaviorActions xsi:type="aadlba:AssignmentAction">
+                    <target xsi:type="aadlba:DataSubcomponentHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedDataSubcomponent.1"/>
+                    <valueExpression>
+                      <relations>
+                        <firstExpression>
+                          <terms>
+                            <factors>
+                              <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10" value="1"/>
+                            </factors>
+                          </terms>
+                        </firstExpression>
+                      </relations>
+                    </valueExpression>
+                  </behaviorActions>
+                  <logicalValueExpression>
+                    <relations relationalOperator="&lt;">
+                      <firstExpression>
+                        <terms>
+                          <factors unaryNumericOperator="abs">
+                            <firstValue xsi:type="aadlba:ValueExpression">
+                              <relations>
+                                <firstExpression>
+                                  <terms>
+                                    <factors>
+                                      <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.10"/>
+                                    </factors>
+                                  </terms>
+                                  <terms>
+                                    <factors>
+                                      <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.30"/>
+                                    </factors>
+                                  </terms>
+                                  <binaryAddingOperators>-</binaryAddingOperators>
+                                </firstExpression>
+                              </relations>
+                            </firstValue>
+                          </factors>
+                        </terms>
+                      </firstExpression>
+                      <secondExpression>
+                        <terms>
+                          <factors>
+                            <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                          </factors>
+                        </terms>
+                      </secondExpression>
+                    </relations>
+                    <relations relationalOperator="&lt;">
+                      <firstExpression>
+                        <terms>
+                          <factors unaryNumericOperator="abs">
+                            <firstValue xsi:type="aadlba:ValueExpression">
+                              <relations>
+                                <firstExpression>
+                                  <terms>
+                                    <factors>
+                                      <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.11"/>
+                                    </factors>
+                                  </terms>
+                                  <terms>
+                                    <factors>
+                                      <firstValue xsi:type="aadlba:EventDataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedEventDataPort.0"/>
+                                    </factors>
+                                  </terms>
+                                  <binaryAddingOperators>-</binaryAddingOperators>
+                                </firstExpression>
+                              </relations>
+                            </firstValue>
+                          </factors>
+                        </terms>
+                      </firstExpression>
+                      <secondExpression>
+                        <terms>
+                          <factors>
+                            <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                          </factors>
+                        </terms>
+                      </secondExpression>
+                    </relations>
+                    <logicalOperators>and</logicalOperators>
+                  </logicalValueExpression>
+                  <elseStatement xsi:type="aadlba:IfStatement" elif="true">
+                    <behaviorActions xsi:type="aadlba:AssignmentAction">
+                      <target xsi:type="aadlba:DataSubcomponentHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedDataSubcomponent.1"/>
+                      <valueExpression>
+                        <relations>
+                          <firstExpression>
+                            <terms>
+                              <factors>
+                                <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10" value="1"/>
+                              </factors>
+                            </terms>
+                          </firstExpression>
+                        </relations>
+                      </valueExpression>
+                    </behaviorActions>
+                    <logicalValueExpression>
+                      <relations relationalOperator="&lt;">
+                        <firstExpression>
+                          <terms>
+                            <factors unaryNumericOperator="abs">
+                              <firstValue xsi:type="aadlba:ValueExpression">
+                                <relations>
+                                  <firstExpression>
+                                    <terms>
+                                      <factors>
+                                        <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.14"/>
+                                      </factors>
+                                    </terms>
+                                    <terms>
+                                      <factors>
+                                        <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.30"/>
+                                      </factors>
+                                    </terms>
+                                    <binaryAddingOperators>-</binaryAddingOperators>
+                                  </firstExpression>
+                                </relations>
+                              </firstValue>
+                            </factors>
+                          </terms>
+                        </firstExpression>
+                        <secondExpression>
+                          <terms>
+                            <factors>
+                              <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                            </factors>
+                          </terms>
+                        </secondExpression>
+                      </relations>
+                      <relations relationalOperator=">">
+                        <firstExpression>
+                          <terms>
+                            <factors>
+                              <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.15"/>
+                            </factors>
+                          </terms>
+                        </firstExpression>
+                        <secondExpression>
+                          <terms>
+                            <factors>
+                              <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                            </factors>
+                          </terms>
+                        </secondExpression>
+                      </relations>
+                      <logicalOperators>and</logicalOperators>
+                    </logicalValueExpression>
+                    <elseStatement xsi:type="aadlba:IfStatement" elif="true">
+                      <behaviorActions xsi:type="aadlba:AssignmentAction">
+                        <target xsi:type="aadlba:DataSubcomponentHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedDataSubcomponent.1"/>
+                        <valueExpression>
+                          <relations>
+                            <firstExpression>
+                              <terms>
+                                <factors>
+                                  <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10" value="1"/>
+                                </factors>
+                              </terms>
+                            </firstExpression>
+                          </relations>
+                        </valueExpression>
+                      </behaviorActions>
+                      <logicalValueExpression>
+                        <relations>
+                          <firstExpression>
+                            <terms>
+                              <factors>
+                                <firstValue xsi:type="aadlba:ValueExpression">
+                                  <relations relationalOperator="&lt;">
+                                    <firstExpression>
+                                      <terms>
+                                        <factors unaryNumericOperator="abs">
+                                          <firstValue xsi:type="aadlba:ValueExpression">
+                                            <relations>
+                                              <firstExpression>
+                                                <terms>
+                                                  <factors>
+                                                    <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.16"/>
+                                                  </factors>
+                                                </terms>
+                                                <terms>
+                                                  <factors>
+                                                    <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.30"/>
+                                                  </factors>
+                                                </terms>
+                                                <binaryAddingOperators>-</binaryAddingOperators>
+                                              </firstExpression>
+                                            </relations>
+                                          </firstValue>
+                                        </factors>
+                                      </terms>
+                                    </firstExpression>
+                                    <secondExpression>
+                                      <terms>
+                                        <factors>
+                                          <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                                        </factors>
+                                      </terms>
+                                    </secondExpression>
+                                  </relations>
+                                  <relations relationalOperator="&lt;">
+                                    <firstExpression>
+                                      <terms>
+                                        <factors unaryNumericOperator="abs">
+                                          <firstValue xsi:type="aadlba:ValueExpression">
+                                            <relations>
+                                              <firstExpression>
+                                                <terms>
+                                                  <factors>
+                                                    <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.17"/>
+                                                  </factors>
+                                                </terms>
+                                                <terms>
+                                                  <factors>
+                                                    <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.30"/>
+                                                  </factors>
+                                                </terms>
+                                                <binaryAddingOperators>-</binaryAddingOperators>
+                                              </firstExpression>
+                                            </relations>
+                                          </firstValue>
+                                        </factors>
+                                      </terms>
+                                    </firstExpression>
+                                    <secondExpression>
+                                      <terms>
+                                        <factors>
+                                          <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                                        </factors>
+                                      </terms>
+                                    </secondExpression>
+                                  </relations>
+                                  <relations relationalOperator="&lt;">
+                                    <firstExpression>
+                                      <terms>
+                                        <factors unaryNumericOperator="abs">
+                                          <firstValue xsi:type="aadlba:ValueExpression">
+                                            <relations>
+                                              <firstExpression>
+                                                <terms>
+                                                  <factors>
+                                                    <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.18"/>
+                                                  </factors>
+                                                </terms>
+                                                <terms>
+                                                  <factors>
+                                                    <firstValue xsi:type="aadlba:EventDataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedEventDataPort.0"/>
+                                                  </factors>
+                                                </terms>
+                                                <binaryAddingOperators>-</binaryAddingOperators>
+                                              </firstExpression>
+                                            </relations>
+                                          </firstValue>
+                                        </factors>
+                                      </terms>
+                                    </firstExpression>
+                                    <secondExpression>
+                                      <terms>
+                                        <factors>
+                                          <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                                        </factors>
+                                      </terms>
+                                    </secondExpression>
+                                  </relations>
+                                  <relations relationalOperator="&lt;">
+                                    <firstExpression>
+                                      <terms>
+                                        <factors unaryNumericOperator="abs">
+                                          <firstValue xsi:type="aadlba:ValueExpression">
+                                            <relations>
+                                              <firstExpression>
+                                                <terms>
+                                                  <factors>
+                                                    <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.19"/>
+                                                  </factors>
+                                                </terms>
+                                                <terms>
+                                                  <factors>
+                                                    <firstValue xsi:type="aadlba:EventDataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedEventDataPort.0"/>
+                                                  </factors>
+                                                </terms>
+                                                <binaryAddingOperators>-</binaryAddingOperators>
+                                              </firstExpression>
+                                            </relations>
+                                          </firstValue>
+                                        </factors>
+                                      </terms>
+                                    </firstExpression>
+                                    <secondExpression>
+                                      <terms>
+                                        <factors>
+                                          <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                                        </factors>
+                                      </terms>
+                                    </secondExpression>
+                                  </relations>
+                                  <logicalOperators>or</logicalOperators>
+                                  <logicalOperators>or</logicalOperators>
+                                  <logicalOperators>or</logicalOperators>
+                                </firstValue>
+                              </factors>
+                            </terms>
+                          </firstExpression>
+                        </relations>
+                        <relations relationalOperator=">">
+                          <firstExpression>
+                            <terms>
+                              <factors>
+                                <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.20"/>
+                              </factors>
+                            </terms>
+                          </firstExpression>
+                          <secondExpression>
+                            <terms>
+                              <factors>
+                                <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                              </factors>
+                            </terms>
+                          </secondExpression>
+                        </relations>
+                        <logicalOperators>and</logicalOperators>
+                      </logicalValueExpression>
+                      <elseStatement xsi:type="aadlba:IfStatement" elif="true">
+                        <behaviorActions xsi:type="aadlba:AssignmentAction">
+                          <target xsi:type="aadlba:DataSubcomponentHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedDataSubcomponent.1"/>
+                          <valueExpression>
+                            <relations>
+                              <firstExpression>
+                                <terms>
+                                  <factors>
+                                    <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10" value="1"/>
+                                  </factors>
+                                </terms>
+                              </firstExpression>
+                            </relations>
+                          </valueExpression>
+                        </behaviorActions>
+                        <logicalValueExpression>
+                          <relations relationalOperator="&lt;">
+                            <firstExpression>
+                              <terms>
+                                <factors unaryNumericOperator="abs">
+                                  <firstValue xsi:type="aadlba:ValueExpression">
+                                    <relations>
+                                      <firstExpression>
+                                        <terms>
+                                          <factors>
+                                            <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.21"/>
+                                          </factors>
+                                        </terms>
+                                        <terms>
+                                          <factors>
+                                            <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.30"/>
+                                          </factors>
+                                        </terms>
+                                        <binaryAddingOperators>-</binaryAddingOperators>
+                                      </firstExpression>
+                                    </relations>
+                                  </firstValue>
+                                </factors>
+                              </terms>
+                            </firstExpression>
+                            <secondExpression>
+                              <terms>
+                                <factors>
+                                  <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                                </factors>
+                              </terms>
+                            </secondExpression>
+                          </relations>
+                          <relations relationalOperator="&lt;">
+                            <firstExpression>
+                              <terms>
+                                <factors unaryNumericOperator="abs">
+                                  <firstValue xsi:type="aadlba:ValueExpression">
+                                    <relations>
+                                      <firstExpression>
+                                        <terms>
+                                          <factors>
+                                            <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.22"/>
+                                          </factors>
+                                        </terms>
+                                        <terms>
+                                          <factors>
+                                            <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.30"/>
+                                          </factors>
+                                        </terms>
+                                        <binaryAddingOperators>-</binaryAddingOperators>
+                                      </firstExpression>
+                                    </relations>
+                                  </firstValue>
+                                </factors>
+                              </terms>
+                            </firstExpression>
+                            <secondExpression>
+                              <terms>
+                                <factors>
+                                  <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                                </factors>
+                              </terms>
+                            </secondExpression>
+                          </relations>
+                          <relations relationalOperator="&lt;">
+                            <firstExpression>
+                              <terms>
+                                <factors unaryNumericOperator="abs">
+                                  <firstValue xsi:type="aadlba:ValueExpression">
+                                    <relations>
+                                      <firstExpression>
+                                        <terms>
+                                          <factors>
+                                            <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.23"/>
+                                          </factors>
+                                        </terms>
+                                        <terms>
+                                          <factors>
+                                            <firstValue xsi:type="aadlba:EventDataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedEventDataPort.0"/>
+                                          </factors>
+                                        </terms>
+                                        <binaryAddingOperators>-</binaryAddingOperators>
+                                      </firstExpression>
+                                    </relations>
+                                  </firstValue>
+                                </factors>
+                              </terms>
+                            </firstExpression>
+                            <secondExpression>
+                              <terms>
+                                <factors>
+                                  <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                                </factors>
+                              </terms>
+                            </secondExpression>
+                          </relations>
+                          <relations relationalOperator="&lt;">
+                            <firstExpression>
+                              <terms>
+                                <factors unaryNumericOperator="abs">
+                                  <firstValue xsi:type="aadlba:ValueExpression">
+                                    <relations>
+                                      <firstExpression>
+                                        <terms>
+                                          <factors>
+                                            <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.24"/>
+                                          </factors>
+                                        </terms>
+                                        <terms>
+                                          <factors>
+                                            <firstValue xsi:type="aadlba:EventDataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedEventDataPort.0"/>
+                                          </factors>
+                                        </terms>
+                                        <binaryAddingOperators>-</binaryAddingOperators>
+                                      </firstExpression>
+                                    </relations>
+                                  </firstValue>
+                                </factors>
+                              </terms>
+                            </firstExpression>
+                            <secondExpression>
+                              <terms>
+                                <factors>
+                                  <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                                </factors>
+                              </terms>
+                            </secondExpression>
+                          </relations>
+                          <logicalOperators>or</logicalOperators>
+                          <logicalOperators>or</logicalOperators>
+                          <logicalOperators>or</logicalOperators>
+                        </logicalValueExpression>
+                        <elseStatement xsi:type="aadlba:IfStatement" elif="true">
+                          <behaviorActions xsi:type="aadlba:AssignmentAction">
+                            <target xsi:type="aadlba:DataSubcomponentHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedDataSubcomponent.1"/>
+                            <valueExpression>
+                              <relations>
+                                <firstExpression>
+                                  <terms>
+                                    <factors>
+                                      <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10" value="1"/>
+                                    </factors>
+                                  </terms>
+                                </firstExpression>
+                              </relations>
+                            </valueExpression>
+                          </behaviorActions>
+                          <logicalValueExpression>
+                            <relations relationalOperator="&lt;">
+                              <firstExpression>
+                                <terms>
+                                  <factors unaryNumericOperator="abs">
+                                    <firstValue xsi:type="aadlba:ValueExpression">
+                                      <relations>
+                                        <firstExpression>
+                                          <terms>
+                                            <factors>
+                                              <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.25"/>
+                                            </factors>
+                                          </terms>
+                                          <terms>
+                                            <factors>
+                                              <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.30"/>
+                                            </factors>
+                                          </terms>
+                                          <binaryAddingOperators>-</binaryAddingOperators>
+                                        </firstExpression>
+                                      </relations>
+                                    </firstValue>
+                                  </factors>
+                                </terms>
+                              </firstExpression>
+                              <secondExpression>
+                                <terms>
+                                  <factors>
+                                    <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                                  </factors>
+                                </terms>
+                              </secondExpression>
+                            </relations>
+                            <relations relationalOperator="&lt;">
+                              <firstExpression>
+                                <terms>
+                                  <factors unaryNumericOperator="abs">
+                                    <firstValue xsi:type="aadlba:ValueExpression">
+                                      <relations>
+                                        <firstExpression>
+                                          <terms>
+                                            <factors>
+                                              <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.26"/>
+                                            </factors>
+                                          </terms>
+                                          <terms>
+                                            <factors>
+                                              <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.30"/>
+                                            </factors>
+                                          </terms>
+                                          <binaryAddingOperators>-</binaryAddingOperators>
+                                        </firstExpression>
+                                      </relations>
+                                    </firstValue>
+                                  </factors>
+                                </terms>
+                              </firstExpression>
+                              <secondExpression>
+                                <terms>
+                                  <factors>
+                                    <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                                  </factors>
+                                </terms>
+                              </secondExpression>
+                            </relations>
+                            <relations relationalOperator="&lt;">
+                              <firstExpression>
+                                <terms>
+                                  <factors unaryNumericOperator="abs">
+                                    <firstValue xsi:type="aadlba:ValueExpression">
+                                      <relations>
+                                        <firstExpression>
+                                          <terms>
+                                            <factors>
+                                              <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.27"/>
+                                            </factors>
+                                          </terms>
+                                          <terms>
+                                            <factors>
+                                              <firstValue xsi:type="aadlba:EventDataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedEventDataPort.0"/>
+                                            </factors>
+                                          </terms>
+                                          <binaryAddingOperators>-</binaryAddingOperators>
+                                        </firstExpression>
+                                      </relations>
+                                    </firstValue>
+                                  </factors>
+                                </terms>
+                              </firstExpression>
+                              <secondExpression>
+                                <terms>
+                                  <factors>
+                                    <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                                  </factors>
+                                </terms>
+                              </secondExpression>
+                            </relations>
+                            <relations relationalOperator="&lt;">
+                              <firstExpression>
+                                <terms>
+                                  <factors unaryNumericOperator="abs">
+                                    <firstValue xsi:type="aadlba:ValueExpression">
+                                      <relations>
+                                        <firstExpression>
+                                          <terms>
+                                            <factors>
+                                              <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.28"/>
+                                            </factors>
+                                          </terms>
+                                          <terms>
+                                            <factors>
+                                              <firstValue xsi:type="aadlba:EventDataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedEventDataPort.0"/>
+                                            </factors>
+                                          </terms>
+                                          <binaryAddingOperators>-</binaryAddingOperators>
+                                        </firstExpression>
+                                      </relations>
+                                    </firstValue>
+                                  </factors>
+                                </terms>
+                              </firstExpression>
+                              <secondExpression>
+                                <terms>
+                                  <factors>
+                                    <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.5"/>
+                                  </factors>
+                                </terms>
+                              </secondExpression>
+                            </relations>
+                            <logicalOperators>or</logicalOperators>
+                            <logicalOperators>or</logicalOperators>
+                            <logicalOperators>or</logicalOperators>
+                          </logicalValueExpression>
+                          <elseStatement>
+                            <behaviorActions xsi:type="aadlba:AssignmentAction">
+                              <target xsi:type="aadlba:DataSubcomponentHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedDataSubcomponent.1"/>
+                              <valueExpression>
+                                <relations>
+                                  <firstExpression>
+                                    <terms>
+                                      <factors>
+                                        <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10"/>
+                                      </factors>
+                                    </terms>
+                                  </firstExpression>
+                                </relations>
+                              </valueExpression>
+                            </behaviorActions>
+                          </elseStatement>
+                        </elseStatement>
+                      </elseStatement>
+                    </elseStatement>
+                  </elseStatement>
+                </elseStatement>
+              </actions>
+              <actions xsi:type="aadlba:IfStatement">
+                <behaviorActions xsi:type="aadlba:AssignmentAction">
+                  <target xsi:type="aadlba:BehaviorVariableHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@variables.2"/>
+                  <valueExpression>
+                    <relations>
+                      <firstExpression unaryAddingOperator="-">
+                        <terms>
+                          <factors>
+                            <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10" value="3"/>
+                          </factors>
+                        </terms>
+                        <terms>
+                          <factors>
+                            <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10" value="10"/>
+                          </factors>
+                          <factors>
+                            <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.01"/>
+                          </factors>
+                          <factors>
+                            <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.0"/>
+                          </factors>
+                          <factors>
+                            <firstValue xsi:type="aadlba:BehaviorVariableHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@variables.0"/>
+                          </factors>
+                          <multiplyingOperators>*</multiplyingOperators>
+                          <multiplyingOperators>*</multiplyingOperators>
+                          <multiplyingOperators>*</multiplyingOperators>
+                        </terms>
+                        <binaryAddingOperators>-</binaryAddingOperators>
+                      </firstExpression>
+                    </relations>
+                  </valueExpression>
+                </behaviorActions>
+                <logicalValueExpression>
+                  <relations relationalOperator=">">
+                    <firstExpression>
+                      <terms>
+                        <factors>
+                          <firstValue xsi:type="aadlba:DataSubcomponentHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedDataSubcomponent.1"/>
+                        </factors>
+                      </terms>
+                    </firstExpression>
+                    <secondExpression>
+                      <terms>
+                        <factors>
+                          <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10"/>
+                        </factors>
+                      </terms>
+                    </secondExpression>
+                  </relations>
+                </logicalValueExpression>
+                <elseStatement xsi:type="aadlba:IfStatement" elif="true">
+                  <behaviorActions xsi:type="aadlba:AssignmentAction">
+                    <target xsi:type="aadlba:BehaviorVariableHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@variables.2"/>
+                    <valueExpression>
+                      <relations>
+                        <firstExpression>
+                          <terms>
+                            <factors>
+                              <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10" value="3"/>
+                            </factors>
+                          </terms>
+                          <terms>
+                            <factors>
+                              <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10" value="10"/>
+                            </factors>
+                            <factors>
+                              <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.01"/>
+                            </factors>
+                            <factors>
+                              <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.0"/>
+                            </factors>
+                            <factors>
+                              <firstValue xsi:type="aadlba:BehaviorVariableHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@variables.0"/>
+                            </factors>
+                            <multiplyingOperators>*</multiplyingOperators>
+                            <multiplyingOperators>*</multiplyingOperators>
+                            <multiplyingOperators>*</multiplyingOperators>
+                          </terms>
+                          <binaryAddingOperators>-</binaryAddingOperators>
+                        </firstExpression>
+                      </relations>
+                    </valueExpression>
+                  </behaviorActions>
+                  <logicalValueExpression>
+                    <relations relationalOperator=">">
+                      <firstExpression>
+                        <terms>
+                          <factors>
+                            <firstValue xsi:type="aadlba:BehaviorVariableHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@variables.1"/>
+                          </factors>
+                        </terms>
+                      </firstExpression>
+                      <secondExpression>
+                        <terms>
+                          <factors>
+                            <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10" value="30"/>
+                          </factors>
+                        </terms>
+                      </secondExpression>
+                    </relations>
+                  </logicalValueExpression>
+                  <elseStatement>
+                    <behaviorActions xsi:type="aadlba:AssignmentAction">
+                      <target xsi:type="aadlba:BehaviorVariableHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@variables.2"/>
+                      <valueExpression>
+                        <relations>
+                          <firstExpression unaryAddingOperator="-">
+                            <terms>
+                              <factors>
+                                <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10" value="3"/>
+                              </factors>
+                            </terms>
+                            <terms>
+                              <factors>
+                                <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10" value="10"/>
+                              </factors>
+                              <factors>
+                                <firstValue xsi:type="aadlba:BehaviorRealLiteral" value="0.01"/>
+                              </factors>
+                              <factors>
+                                <firstValue xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.0"/>
+                              </factors>
+                              <factors>
+                                <firstValue xsi:type="aadlba:BehaviorVariableHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@variables.0"/>
+                              </factors>
+                              <multiplyingOperators>*</multiplyingOperators>
+                              <multiplyingOperators>*</multiplyingOperators>
+                              <multiplyingOperators>*</multiplyingOperators>
+                            </terms>
+                            <binaryAddingOperators>-</binaryAddingOperators>
+                          </firstExpression>
+                        </relations>
+                      </valueExpression>
+                    </behaviorActions>
+                  </elseStatement>
+                </elseStatement>
+              </actions>
+              <actions xsi:type="aadlba:AssignmentAction">
+                <target xsi:type="aadlba:DataPortHolder" element="//@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.32"/>
+                <valueExpression>
+                  <relations>
+                    <firstExpression>
+                      <terms>
+                        <factors>
+                          <firstValue xsi:type="aadlba:BehaviorVariableHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@variables.2"/>
+                        </factors>
+                      </terms>
+                    </firstExpression>
+                  </relations>
+                </valueExpression>
+              </actions>
+              <actions xsi:type="aadlba:IfStatement">
+                <behaviorActions xsi:type="aadlba:AssignmentAction">
+                  <target xsi:type="aadlba:DataSubcomponentHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedDataSubcomponent.0"/>
+                  <valueExpression>
+                    <relations>
+                      <firstExpression>
+                        <terms>
+                          <factors>
+                            <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10" value="1"/>
+                          </factors>
+                        </terms>
+                      </firstExpression>
+                    </relations>
+                  </valueExpression>
+                </behaviorActions>
+                <logicalValueExpression>
+                  <relations relationalOperator=">">
+                    <firstExpression>
+                      <terms>
+                        <factors>
+                          <firstValue xsi:type="aadlba:BehaviorVariableHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@variables.2"/>
+                        </factors>
+                      </terms>
+                    </firstExpression>
+                    <secondExpression>
+                      <terms>
+                        <factors>
+                          <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10"/>
+                        </factors>
+                      </terms>
+                    </secondExpression>
+                  </relations>
+                </logicalValueExpression>
+                <elseStatement xsi:type="aadlba:IfStatement" elif="true">
+                  <behaviorActions xsi:type="aadlba:AssignmentAction">
+                    <target xsi:type="aadlba:DataSubcomponentHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedDataSubcomponent.0"/>
+                    <valueExpression>
+                      <relations>
+                        <firstExpression unaryAddingOperator="-">
+                          <terms>
+                            <factors>
+                              <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10" value="1"/>
+                            </factors>
+                          </terms>
+                        </firstExpression>
+                      </relations>
+                    </valueExpression>
+                  </behaviorActions>
+                  <logicalValueExpression>
+                    <relations relationalOperator="&lt;">
+                      <firstExpression>
+                        <terms>
+                          <factors>
+                            <firstValue xsi:type="aadlba:BehaviorVariableHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedAnnexSubclause.0/@parsedAnnexSubclause/@variables.2"/>
+                          </factors>
+                        </terms>
+                      </firstExpression>
+                      <secondExpression>
+                        <terms>
+                          <factors>
+                            <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10"/>
+                          </factors>
+                        </terms>
+                      </secondExpression>
+                    </relations>
+                  </logicalValueExpression>
+                  <elseStatement>
+                    <behaviorActions xsi:type="aadlba:AssignmentAction">
+                      <target xsi:type="aadlba:DataSubcomponentHolder" element="//@ownedPublicSection/@ownedClassifier.7/@ownedDataSubcomponent.0"/>
+                      <valueExpression>
+                        <relations>
+                          <firstExpression>
+                            <terms>
+                              <factors>
+                                <firstValue xsi:type="aadlba:BehaviorIntegerLiteral" base="10"/>
+                              </factors>
+                            </terms>
+                          </firstExpression>
+                        </relations>
+                      </valueExpression>
+                    </behaviorActions>
+                  </elseStatement>
+                </elseStatement>
+              </actions>
+            </content>
+          </actions>
+        </parsedAnnexSubclause>
+      </ownedAnnexSubclause>
+      <ownedRealization implemented="//@ownedPublicSection/@ownedClassifier.6"/>
+      <ownedDataSubcomponent name="action">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral"/>
+              <maximum xsi:type="aadl2:RealLiteral"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="danger">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral"/>
+              <maximum xsi:type="aadl2:RealLiteral"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataSubcomponent>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:SystemType" name="Plant">
+      <ownedPropertyAssociation>
+        <property href="DynamicsBaseTypes/EnvAADL.aadl#EnvAADL.isPlant"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedDataPort name="Ecurr_xego" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ecurr_yego" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataPort>
+      <ownedDataPort name="Ecurr_vego" out="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataPort>
+      <ownedDataPort name="Econtl_aego" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataPort>
+      <ownedDataPort name="Econtl_thetaego" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataPort>
+      <ownedDataPort name="Econtl_angleego" in="true">
+        <dataFeatureClassifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataPort>
+    </ownedClassifier>
+    <ownedClassifier xsi:type="aadl2:SystemImplementation" name="Plant.impl">
+      <ownedPropertyAssociation>
+        <property href="DynamicsBaseTypes/EnvAADL.aadl#EnvAADL.ContinuousDynamics"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:StringLiteral" value="x_ego'=cos(theta_ego)*v_ego; y_ego'=sin(theta_ego)*v_ego;v_ego'=a_ego;theta_ego'=tan(angle_ego)/Length*v_ego;"/>
+        </ownedValue>
+      </ownedPropertyAssociation>
+      <ownedRealization implemented="//@ownedPublicSection/@ownedClassifier.8"/>
+      <ownedPortConnection name="C1plant">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.0"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.9/@ownedDataSubcomponent.0"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C2plant">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.1"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.9/@ownedDataSubcomponent.1"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C3plant">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.2"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.9/@ownedDataSubcomponent.2"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C4plant">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.9/@ownedDataSubcomponent.3"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.3"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C5plant">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.9/@ownedDataSubcomponent.4"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.4"/>
+      </ownedPortConnection>
+      <ownedPortConnection name="C6plant">
+        <destination connectionEnd="//@ownedPublicSection/@ownedClassifier.9/@ownedDataSubcomponent.5"/>
+        <source connectionEnd="//@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.5"/>
+      </ownedPortConnection>
+      <ownedDataSubcomponent name="x_ego">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral"/>
+              <maximum xsi:type="aadl2:RealLiteral"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="y_ego">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral"/>
+              <maximum xsi:type="aadl2:RealLiteral"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="v_ego">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral" value="10.0"/>
+              <maximum xsi:type="aadl2:RealLiteral" value="10.0"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="a_ego">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral"/>
+              <maximum xsi:type="aadl2:RealLiteral"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="theta_ego">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral"/>
+              <maximum xsi:type="aadl2:RealLiteral"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataSubcomponent>
+      <ownedDataSubcomponent name="angle_ego">
+        <ownedPropertyAssociation>
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Real_Range"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:RealLiteral"/>
+              <maximum xsi:type="aadl2:RealLiteral"/>
+            </ownedValue>
+          </ownedValue>
+        </ownedPropertyAssociation>
+        <dataSubcomponentType xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Float"/>
+      </ownedDataSubcomponent>
+    </ownedClassifier>
+    <importedUnit xsi:type="aadl2:PropertySet" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model"/>
+    <importedUnit xsi:type="aadl2:Package" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types"/>
+    <importedUnit xsi:type="aadl2:PropertySet" href="DynamicsBaseTypes/EnvAADL.aadl#EnvAADL"/>
+    <importedUnit xsi:type="aadl2:Package" href="DynamicsBaseTypes/Dynamics_Types.aadl#Dynamics_Types"/>
+    <importedUnit xsi:type="aadl2:PropertySet" href="DynamicsBaseTypes/VehiclePhysics.aadl#VehiclePhysics"/>
+    <importedUnit xsi:type="aadl2:Package" href="case-study/MathLib.aadl#MathLib"/>
+  </ownedPublicSection>
+</aadl2:Package>
