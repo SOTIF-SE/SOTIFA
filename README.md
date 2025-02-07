@@ -53,6 +53,8 @@ Import the `env-self-driving-car/` project or create your own.
 
 - The system consists of hybrid automata extracted from plant, controller, and environment components.
 
+![contents](https://github.com/SOTIF-SE/SOTIFA/tree/main/README.source/top+plant.pdf)
+
 - <img src="README.source/top+plant.pdf" alt="top+plant" style="zoom:66%;" />
 - <img src="README.source/tcontroller+env.pdf" alt="tcontroller+env" style="zoom:66%;" />
 
