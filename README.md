@@ -60,7 +60,7 @@ Import the `env-self-driving-car/` project or create your own.
 - ##### Main components:
 - - **Plant Component**: Models the ego car’s dynamics with initial values (like `x_ego = 0`, `v_ego = 10`, `a_ego = 0`).
 - - **Environment Component**: Defines external factors (e.g., friction, slope) and dynamic actors (e.g., environmental vehicles).
-- - **Controller Component**: Samples ego car and environmental parameters, then calculates acceleration to maintain a safe distance of 10 units from the preceding vehicle.
+- - **Controller Component**: Samples ego car and environmental parameters, then calculates acceleration to maintain a safe distance from the preceding vehicle.
 
 
 
