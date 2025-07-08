@@ -197,11 +197,11 @@ We apply ±20% variation to test the robustness of the formula across four ADS c
 
 The SOTIFA scores remain stable under moderate parameter changes, showing robustness in identifying high-risk ADS configurations.
 
-##### 🔒 Probabilistic Guarantees
+#### 🔒 Probabilistic Guarantees
 
 Our choice of falsification stems from the inherent undecidability of verifying complex hybrid systems that combine continuous dynamics with discrete logic. Instead, we focus on falsification-guided testing as a scalable and practical approach to finding safety violations. While falsification-based evaluation by its nature cannot guarantee completeness, our approach proposes the ***EUCA Risk Value (ERV)*** to provide a reference value for the SOTIF-related risk based on the falsification process.
 
-Although the ERV does not provide formal guarantees of completeness, our method's underlying falsification is built upon a well-established theoretical foundation in classification-based derivative-free optimization, as described by **Yang Yu, Hong Qian, and Yi-Qi Hu** in their work *"Derivative-free optimization via classification"* (AAAI Conference on Artificial Intelligence, Vol. 30, No. 1, 2016) [Yu et al., 2016]. This foundation provides probabilistic guarantees on its ability to approximate the global optimum within a bounded number of queries.
+Although the ERV does not provide formal guarantees of completeness, our method's underlying falsification is built upon a well-established theoretical foundation in classification-based derivative-free optimization, as described by [Yu et al., 2016]. This foundation provides probabilistic guarantees on its ability to approximate the global optimum within a bounded number of queries.
 
 Specifically, given an objective function \(f\), if a classification-based optimization algorithm has failure probability \(\delta > 0\) and approximation level \(\epsilon \geq 0\), the query complexity (i.e., the number of solution samples) is upper bounded by:
 
