@@ -197,6 +197,40 @@ We apply ±20% variation to test the robustness of the formula across four ADS c
 
 The SOTIFA scores remain stable under moderate parameter changes, showing robustness in identifying high-risk ADS configurations.
 
+##### 🔒 Probabilistic Guarantees
+
+Our choice of falsification stems from the inherent undecidability of verifying complex hybrid systems that combine continuous dynamics with discrete logic. Instead, we focus on falsification-guided testing as a scalable and practical approach to finding safety violations. While falsification-based evaluation by its nature cannot guarantee completeness, our approach proposes the ***EUCA Risk Value (ERV)***[^erv-footnote] to provide a reference value for the SOTIF-related risk based on the falsification process.
+
+Although the ERV does not provide formal guarantees of completeness, our method's underlying falsification is built upon a well-established theoretical foundation in classification-based derivative-free optimization, as described by **Yang Yu, Hong Qian, and Yi-Qi Hu** in their work *"Derivative-free optimization via classification"* (AAAI Conference on Artificial Intelligence, Vol. 30, No. 1, 2016) [Yu et al., 2016]. This foundation provides probabilistic guarantees on its ability to approximate the global optimum within a bounded number of queries.
+
+Specifically, given an objective function \(f\), if a classification-based optimization algorithm has failure probability \(\delta > 0\) and approximation level \(\epsilon \geq 0\), the query complexity (i.e., the number of solution samples) is upper bounded by:
+
+$$
+\mathcal{O}\left(\frac{1}{|D_\epsilon|} \left((1 - \lambda) + \frac{\lambda}{\gamma T} \sum_{t=1}^T \frac{1 - \frac{R_t}{1 - \lambda} - \theta}{|D_t|} \right)^{-1} \ln \frac{1}{\delta}\right)
+$$
+
+This implies that the probability of obtaining a solution satisfying \( |f(x) - f^{\text{opt}}| \leq \epsilon \) is at least \(1 - \delta\), i.e.,
+
+$$
+\mathbb{P}(| f(x) - f^{\text{opt}} | \leq \epsilon) \geq 1 - \delta 
+$$
+
+where:
+
+- \(f^{\text{opt}}\) is the minimum function value  
+- \(D_{\epsilon}\) is the area of the overall target solutions (i.e., solutions close to the global optimum within \(\epsilon\))  
+- \(D_t\) is the area of the target solutions in iteration \(t\) (i.e., the area that \(\tilde{D}_t\) approximates)  
+- \(|\cdot|\) denotes the ratio of the area to the total search space  
+- \(R_t\) is the prediction error of \(\tilde{D}_t\) with respect to \(D_t\)  
+- \(T\) is the total number of iterations
+
+Importantly, while our system is not formally verified, this theoretical result ensures that, under reasonable conditions on the learning model (i.e., small \(\theta\)-dependence and \(\gamma\)-shrinkage), our sampling procedure is not arbitrary and will identify unsafe behaviors with high probability if they exist within the accessible search space. In practice, we have demonstrated this capability in ADS, exhibiting continuous behavior in a complex and uncertain environment.
+
+[^erv-footnote]: The EUCA Risk Value (ERV), previously named Hazard Confidence Value (HCV), serves as a confidence metric in identifying hazardous scenarios associated with each EUCA. Since the manuscript also uses the term “hazard” in other contexts, the original name could cause confusion. We therefore renamed the metric to better reflect its purpose.
+
+[Yu et al., 2016]: Yang Yu, Hong Qian, and Yi-Qi Hu. *Derivative-free optimization via classification*. In: Proceedings of the AAAI Conference on Artificial Intelligence, Vol. 30, No. 1. 2016.
+
+
 
 ### SOTIFATools
 
