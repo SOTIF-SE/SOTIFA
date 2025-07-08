@@ -152,7 +152,7 @@ We construct a knowledge graph to formalize causal links from traffic losses to 
 - Vehicle actions (e.g., continous acceleration) are linked to constraints via `provide` edges.
 - Environmental factors (e.g., `Visibility < 50`) are modeled as `EnvFactor` nodes that influence `EnvFactorParam` such as `vmax`.
 
-##### 🌍 Environmental Factors & Signal Modeling
+### 🌍 Environmental Factors
 
 **SOTIFA** considers a broad range of environmental factors, including: **road characteristics** (e.g., type, slope, friction), **atmospheric conditions** (e.g., weather, visibility), and **infrastructure elements** (e.g., traffic lights, rail crossings, parking restrictions, and restricted U-turn areas), as well as both dynamic and static actors involved in the scenario.
 
