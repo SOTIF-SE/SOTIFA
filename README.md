@@ -152,6 +152,21 @@ We construct a knowledge graph to formalize causal links from traffic losses to 
 - Vehicle actions (e.g., continous acceleration) are linked to constraints via `provide` edges.
 - Environmental factors (e.g., `Visibility < 50`) are modeled as `EnvFactor` nodes that influence `EnvFactorParam` such as `vmax`.
 
+##### 🌍 Environmental Factors & Signal Modeling
+
+**SOTIFA** considers a broad range of environmental factors, including: **road characteristics** (e.g., type, slope, friction), **atmospheric conditions** (e.g., weather, visibility), and **infrastructure elements** (e.g., traffic lights, rail crossings, parking restrictions, and restricted U-turn areas), as well as both dynamic and static actors involved in the scenario.
+
+Constraints such as *traffic light restrictions*, *rail crossing areas*, *parking restrictions*, and *restricted U-turn areas* are primarily represented based on their **spatial extent**. Each is defined as a bounded rectangular region using coordinate parameters (e.g., `parking_restrictionX_env` and `parking_restrictionY_env`), which allows for distance-based constraint representation. In addition to spatial boundaries, dynamic infrastructure states—such as the state of a traffic light—are modeled through variables like `signal`, which encode whether a condition permits passage or not.
+
+Rather than assigning fixed values or simply sampling from a uniform range, SOTIFA uses dynamic expressions such as `slope = [0.4, 0.6]` to indicate the **search bounds for a dynamic input signal**, $slope(t)$. These predefined bounds are passed into the falsification engine, which searches for critical trajectories likely to trigger unsafe control actions.
+
+To enable such trajectory-level analysis, each input signal is parameterized as a piecewise continuous function. The **granularity** of the analysis is directly determined by the number of user-defined interpolation segments (e.g., 3 or 5), which control the signal's complexity. This mechanism enables the falsifier to explore a richer and more nuanced dynamic input space, as opposed to simplistic random sampling strategies.
+
+The implementation relies on the GNU Scientific Library (GSL) [Gough, 2009], allowing efficient numerical computation and optimization. This integration empowers SOTIFA to conduct a more thorough analysis of environmental uncertainty, contributing to more robust SOTIF risk identification.
+
+[Gough, 2009]: Gough, Brian. *GNU Scientific Library Reference Manual*. Network Theory Ltd., 2009.
+
+
 ### 📊 Statistical Significance and Sensitivity Analysis
 
 We conducted 15 independent runs per configuration (TB1–TB4, IDM1–IDM4, OVM1–OVM4) to assess risk. Wilcoxon signed-rank tests show significant differences (p < 0.05) across all model pairs. Bootstrap analysis provides mean risk scores and 95% confidence intervals.
