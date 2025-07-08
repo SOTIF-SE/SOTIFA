@@ -67,7 +67,7 @@ Import the `env-self-driving-car/` project or create your own.
 - **Controller Component**  
   Samples ego car and environmental parameters, then calculates acceleration to maintain a safe distance from the preceding vehicle.
 
-> **Note:** EnvAADL can formalize how variable atmospheric conditions, such as weather and visibility, impact the perception system. To achieve this, the component interfaces with a knowledge graph that maps specific conditions (e.g., ‘visibility<50') to quantifiable perception error magnitudes. This allows the framework to dynamically generate a realistic perception_error value, which is then used by the vehicle's control model to simulate how real-world environmental effects can lead to potential SOTIF-related risks.
+> **Note:** Crucially, this component also formalizes how variable atmospheric conditions, such as weather and visibility, impact the perception system. To achieve this, the component interfaces with a knowledge graph that maps specific conditions (e.g., ‘visibility<50') to quantifiable perception error magnitudes. This allows the framework to dynamically generate a realistic perception_error value, which is then used by the vehicle's control model to simulate how real-world environmental effects can lead to potential SOTIF-related risks.
 
 ---
 
