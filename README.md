@@ -197,7 +197,7 @@ We apply ±20% variation to test the robustness of the formula across four ADS c
 
 The SOTIFA scores remain stable under moderate parameter changes, showing robustness in identifying high-risk ADS configurations.
 
-#### 🔒 Probabilistic Guarantees
+### 🔒 Probabilistic Guarantees
 
 Our choice of falsification stems from the inherent undecidability of verifying complex hybrid systems that combine continuous dynamics with discrete logic. Instead, we focus on falsification-guided testing as a scalable and practical approach to finding safety violations. While falsification-based evaluation by its nature cannot guarantee completeness, our approach proposes the ***EUCA Risk Value (ERV)*** to provide a reference value for the SOTIF-related risk based on the falsification process.
 
