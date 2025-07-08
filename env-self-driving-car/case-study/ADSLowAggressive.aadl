@@ -10,7 +10,7 @@ public
 
 	system ADSLowAggressive
 		properties
-			Period => 3 sec;
+			Period => 1 sec;
 			EnvAADL::Sampling_Time => 10ms .. 30ms;
 			EnvAADL::Response_Time => 40ms .. 60ms;
 			VehiclePhysics::Mass => 1500.0;
@@ -418,11 +418,11 @@ public
 			  end if;
               
               if (danger > 0)
-                contl_aego := -3 - 10 * 0.01 * Efriction * cos_slope
+                contl_aego := -2.8 - 10 * 0.01 * Efriction * cos_slope
               elsif (dd > 30)
-                contl_aego := 3 - 10 * 0.01 * Efriction * cos_slope
+                contl_aego := 2.8 - 10 * 0.01 * Efriction * cos_slope
               else
-                contl_aego := -3 - 10 * 0.01 * Efriction * cos_slope
+                contl_aego := -2.8 - 10 * 0.01 * Efriction * cos_slope
               end if;
               
               Econtl_aego := contl_aego;
