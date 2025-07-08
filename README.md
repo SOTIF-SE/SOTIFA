@@ -243,4 +243,3 @@ Importantly, while our system is not formally verified, this theoretical result 
 - Installation and usage videos are available:  
   - `SOTIFA Installation.mp4`  
   - `SOTIFA Usage.mp4`  
-- Supplementary_Discussion.pdf
