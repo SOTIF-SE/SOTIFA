@@ -199,7 +199,7 @@ The SOTIFA scores remain stable under moderate parameter changes, showing robust
 
 ##### 🔒 Probabilistic Guarantees
 
-Our choice of falsification stems from the inherent undecidability of verifying complex hybrid systems that combine continuous dynamics with discrete logic. Instead, we focus on falsification-guided testing as a scalable and practical approach to finding safety violations. While falsification-based evaluation by its nature cannot guarantee completeness, our approach proposes the ***EUCA Risk Value (ERV)***[^erv-footnote] to provide a reference value for the SOTIF-related risk based on the falsification process.
+Our choice of falsification stems from the inherent undecidability of verifying complex hybrid systems that combine continuous dynamics with discrete logic. Instead, we focus on falsification-guided testing as a scalable and practical approach to finding safety violations. While falsification-based evaluation by its nature cannot guarantee completeness, our approach proposes the ***EUCA Risk Value (ERV)*** to provide a reference value for the SOTIF-related risk based on the falsification process.
 
 Although the ERV does not provide formal guarantees of completeness, our method's underlying falsification is built upon a well-established theoretical foundation in classification-based derivative-free optimization, as described by **Yang Yu, Hong Qian, and Yi-Qi Hu** in their work *"Derivative-free optimization via classification"* (AAAI Conference on Artificial Intelligence, Vol. 30, No. 1, 2016) [Yu et al., 2016]. This foundation provides probabilistic guarantees on its ability to approximate the global optimum within a bounded number of queries.
 
@@ -226,7 +226,6 @@ where:
 
 Importantly, while our system is not formally verified, this theoretical result ensures that, under reasonable conditions on the learning model (i.e., small \(\theta\)-dependence and \(\gamma\)-shrinkage), our sampling procedure is not arbitrary and will identify unsafe behaviors with high probability if they exist within the accessible search space. In practice, we have demonstrated this capability in ADS, exhibiting continuous behavior in a complex and uncertain environment.
 
-[^erv-footnote]: The EUCA Risk Value (ERV), previously named Hazard Confidence Value (HCV), serves as a confidence metric in identifying hazardous scenarios associated with each EUCA. Since the manuscript also uses the term “hazard” in other contexts, the original name could cause confusion. We therefore renamed the metric to better reflect its purpose.
 
 [Yu et al., 2016]: Yang Yu, Hong Qian, and Yi-Qi Hu. *Derivative-free optimization via classification*. In: Proceedings of the AAAI Conference on Artificial Intelligence, Vol. 30, No. 1. 2016.
 
