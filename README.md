@@ -1,6 +1,6 @@
 # A STPA-Guided SOTIF Assessment of Real-Time Autonomous Driving Behavior in Uncertain Environments
 
-This repository presents a new SOTIF(Safety Of The Intended Functionality) assessment tool for ADS----SOTIFA. It can systematically evaluate the SOTIF risk of different design models of ADS(Automated Driving System) under uncertain environment.
+This repository presents a new SOTIF(Safety Of The Intended Functionality) assessment tool for ADS----SOTIFA. It can systematically evaluate the SOTIF risk of different design models of ADS(Automated Driving System) under an uncertain environment.
 
 ## Overview
 
@@ -18,7 +18,7 @@ We conducted the experiment using the tool chain under the following environment
   - [osate2-2.11.0](https://osate-build.sei.cmu.edu/download/osate/stable/2.11.0/products/)
   - [Neo4j 5.10.0(COMMUNITY)](https://neo4j.com/deployment-center/#releases)
 
-SOTIFA uses the environment above. After install the tools, we also need to import the information we need:
+SOTIFA uses the environment above. After installing the tools, we also need to import the information we need:
 
 - **Copy lib to /usr/lib**
 
@@ -67,6 +67,8 @@ Import the `env-self-driving-car/` project or create your own.
 - **Controller Component**  
   Samples ego car and environmental parameters, then calculates acceleration to maintain a safe distance from the preceding vehicle.
 
+> **Note:** EnvAADL can formalize how variable atmospheric conditions, such as weather and visibility, impact the perception system. To achieve this, the component interfaces with a knowledge graph that maps specific conditions (e.g., ‘visibility<50') to quantifiable perception error magnitudes. This allows the framework to dynamically generate a realistic perception_error value, which is then used by the vehicle's control model to simulate how real-world environmental effects can lead to potential SOTIF-related risks.
+
 ---
 
 #### 2. 📉 SOTIF Assessment
@@ -93,7 +95,7 @@ SOTIFA
 │      ├── Case1_Random_Actor
 │      ├── Case2_Static_Actor
 │      ├── Script_Code
-│      └── Vedio
+│      └── Video
 └── SOTIFATools
 │      ├── lib
 │      ├── SOTIFASite
@@ -129,7 +131,6 @@ SOTIFA
 >>
 >> **Generated Automata**: `ADSLowAggressiveProduct.xml`
 
-> **Note:** EnvAADL can formalize how variable atmospheric conditions, such as weather and visibility, impact the perception system. To achieve this, the component interfaces with a knowledge graph that maps specific conditions (e.g., ‘visibility<50') to quantifiable perception error magnitudes. This allows the framework to dynamically generate a realistic perception\_error value, which is then used by the vehicle's control model to simulate how real-world environmental effects can lead to potential SOTIF-related risks.
 
 
 #### 🔁 CARLA-based Reproduction
