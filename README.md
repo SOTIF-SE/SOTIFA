@@ -217,12 +217,13 @@ $$
 
 where:
 
-- \(f^{\text{opt}}\) is the minimum function value  
-- \(D_{\epsilon}\) is the area of the overall target solutions (i.e., solutions close to the global optimum within \(\epsilon\))  
-- \(D_t\) is the area of the target solutions in iteration \(t\) (i.e., the area that \(\tilde{D}_t\) approximates)  
-- \(|\cdot|\) denotes the ratio of the area to the total search space  
-- \(R_t\) is the prediction error of \(\tilde{D}_t\) with respect to \(D_t\)  
-- \(T\) is the total number of iterations
+- $f^{\text{opt}}$ is the minimum function value  
+- $D_{\epsilon}$ is the area of the overall target solutions (i.e., solutions close to the global optimum within $\epsilon$)  
+- $D_t$ is the area of the target solutions in iteration $t$ (i.e., the area that $\tilde{D}_t$ approximates)  
+- $|\cdot|$ denotes the ratio of the area to the total search space  
+- $R_t$ is the prediction error of $\tilde{D}_t$ with respect to $D_t$  
+- $T$ is the total number of iterations
+
 
 Importantly, while our system is not formally verified, this theoretical result ensures that, under reasonable conditions on the learning model (i.e., small \(\theta\)-dependence and \(\gamma\)-shrinkage), our sampling procedure is not arbitrary and will identify unsafe behaviors with high probability if they exist within the accessible search space. In practice, we have demonstrated this capability in ADS, exhibiting continuous behavior in a complex and uncertain environment.
 
