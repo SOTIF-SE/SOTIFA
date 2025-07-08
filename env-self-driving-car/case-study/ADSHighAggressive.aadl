@@ -10,7 +10,7 @@ public
 
 	system ADSHighAggressive
 		properties
-			Period => 3 sec;
+			Period => 1 sec;
 			EnvAADL::Sampling_Time => 10ms .. 30ms;
 			EnvAADL::Response_Time => 40ms .. 60ms;
 			VehiclePhysics::Mass => 1500.0;
@@ -385,7 +385,7 @@ public
 			
 			danger: data Base_Types::Float {Data_Model::Real_Range => 0.0..0.0;};
 			
-			acc: data Dynamics_Types::dynamic {Data_Model::Real_Range => 20.0..30.0;};
+			acc: data Dynamics_Types::dynamic {Data_Model::Real_Range => 9.0..10.0;};
 			dec: data Dynamics_Types::dynamic {Data_Model::Real_Range => -8.0..-4.0;};
 		properties
 			EnvAADL::Action => (-1, 1);
