@@ -225,7 +225,7 @@ where:
 - $T$ is the total number of iterations
 
 
-Importantly, while our system is not formally verified, this theoretical result ensures that, under reasonable conditions on the learning model (i.e., small \(\theta\)-dependence and \(\gamma\)-shrinkage), our sampling procedure is not arbitrary and will identify unsafe behaviors with high probability if they exist within the accessible search space. In practice, we have demonstrated this capability in ADS, exhibiting continuous behavior in a complex and uncertain environment.
+Importantly, while our system is not formally verified, this theoretical result ensures that, under reasonable conditions on the learning model (i.e., small $\theta$-dependence and $\gamma$-shrinkage), our sampling procedure is not arbitrary and will identify unsafe behaviors with high probability if they exist within the accessible search space. In practice, we have demonstrated this capability in ADS, exhibiting continuous behavior in a complex and uncertain environment.
 
 
 [Yu et al., 2016]: Yang Yu, Hong Qian, and Yi-Qi Hu. *Derivative-free optimization via classification*. In: Proceedings of the AAAI Conference on Artificial Intelligence, Vol. 30, No. 1. 2016.
