@@ -1,0 +1,5 @@
+path staying time: 
+  0  0.01  0.03  0.96  0  
+Witness: 
+	No0. :[system_init]^system_t0^[init]^sample^[WaitControl,Environment,Plant]^response^[Actuate,Environment,Plant]^target_transition^[system_virtual_target]
+

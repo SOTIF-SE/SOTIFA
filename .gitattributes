@@ -1,2 +1,0 @@
-AETG filter=lfs diff=lfs merge=lfs -text
-getTree filter=lfs diff=lfs merge=lfs -text
