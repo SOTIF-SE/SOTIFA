@@ -204,7 +204,6 @@ This example shows how a real-world hazard is decomposed into nodes and edges, p
 #### Tooling, Semi-Automation, and Reproducibility
 
 - The KG is currently **manually constructed**, but efficiency is enhanced using reusable **constraint templates** and **causal patterns**, allowing domain experts to semi-automatically expand the KG for new scenarios.  
-- Future work aims to develop tools that automatically instantiate these templates from formal ADS specifications, further reducing manual effort.  
 
 - The **entire KG dataset** and the **associated `SOTIFA` plugin** are publicly available, enabling replication of the KG construction, SOTIF risk assessment, and extension of the framework.  
 - The KG is stored in **Neo4j**, a graph database whose Cypher query language enables traversal and automated reasoning.
