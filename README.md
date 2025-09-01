@@ -146,11 +146,69 @@ We reproduce unsafe scenarios in CARLA by injecting counterexample traces genera
 
 We construct a knowledge graph to formalize causal links from traffic losses to unsafe actions:
 
-- A reported loss (e.g., *Loss of life*) is modeled as a `Loss` node.
-- A related hazard (e.g., *Vehicle exceeds speed limit*) becomes a `Hazard` node, linked via `Caused_by`.
-- Hazards are formalized into `UnsafeSystemConstraint` nodes (e.g., `v_ego > vmax`), using environment and ego vehicle parameters.
-- Vehicle actions (e.g., continous acceleration) are linked to constraints via `provide` edges.
-- Environmental factors (e.g., `Visibility < 50`) are modeled as `EnvFactor` nodes that influence `EnvFactorParam` such as `vmax`.
+#### Construction Process: Step-by-Step Methodology
+
+The Knowledge Graph (KG) serves as a reusable knowledge base for SOTIF analysis, capturing causal relationships from environmental conditions to system actions, unsafe constraints, hazards, and potential losses. Its construction follows a systematic, top-down causal reasoning process, grounded in traffic accident reports and scenario modeling standards such as ASAM OpenSCENARIO.
+
+The construction steps are:
+
+1. **Identify Potential Loss**  
+   Start from a high-level `Loss` node, such as *“Loss of life or personal injury.”*
+
+2. **Decompose into Causal Hazards**  
+   Identify system-level hazards that could lead to this loss. For example, the `Hazard` node *“vehicle exceeding the speed limit”* is linked to the `Loss` node via a `Caused_by` edge.
+
+3. **Formalize Hazards as Constraints**  
+   Translate each hazard into a machine-readable `UnsafeSystemConstraint` node. For instance, the hazard above becomes the formal constraint `v_ego > vmax`.
+
+4. **Link Triggering Actions and Environmental Factors**  
+   Identify `Action` nodes (e.g., *“continuous acceleration”*) that can trigger the unsafe constraint. Parameters involved (e.g., `vmax`, modeled as `EnvFactorParam`) are influenced by environmental conditions represented by `EnvFactor` nodes (e.g., *“Visibility < 50”*). This links the unsafe system constraint, the triggering action, and relevant environmental factors in a structured, machine-readable representation.
+
+---
+
+#### Example: Hazard-to-KG Mapping
+
+Consider the scenario of a vehicle speeding under low visibility. The KG nodes and relations include:
+
+- **Loss Node**  
+  - `Loss_ID`: "L-1"  
+  - `Description`: "Loss of life or personal injury"
+
+- **Hazard Node**  
+  - `Hazard_ID`: "H-1"  
+  - `Description`: "Vehicle exceeding the speed limit"  
+  - Connected to the `Loss` node via `Caused_by` edge
+
+- **UnsafeSystemConstraint Node**  
+  - `Description`: "v_ego > vmax"  
+  - Connected to the `Hazard` node via `Caused_by` edge
+
+- **Action Node**  
+  - "Acceleration"  
+  - Linked to the `UnsafeSystemConstraint` node by `Caused_by` edge, with property `types_of_providing = provide`
+
+- **EnvFactor Node**  
+  - "Visibility < 50"  
+  - Captures environmental conditions affecting system parameters
+
+- **EnvFactorParam Node**  
+  - `Expression`: "vmax"  
+  - `Value`: 20 km/h  
+  - `Result`: "minimum"  
+  - Ensures that under multiple environmental factors, the strictest safe bound is applied
+
+This example shows how a real-world hazard is decomposed into nodes and edges, producing a causal subgraph that connects losses, hazards, unsafe constraints, actions, and environmental factors.
+
+---
+
+#### Tooling, Semi-Automation, and Reproducibility
+
+- The KG is currently **manually constructed**, but efficiency is enhanced using reusable **constraint templates** and **causal patterns**, allowing domain experts to semi-automatically expand the KG for new scenarios.  
+- Future work aims to develop tools that automatically instantiate these templates from formal ADS specifications, further reducing manual effort.  
+
+- The **entire KG dataset** and the **associated `SOTIFA` plugin** are publicly available, enabling replication of the KG construction, SOTIF risk assessment, and extension of the framework.  
+- The KG is stored in **Neo4j**, a graph database whose Cypher query language enables traversal and automated reasoning.
+
 
 ### 🌍 Environmental Factors
 
