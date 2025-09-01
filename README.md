@@ -184,11 +184,11 @@ Consider the scenario of a vehicle speeding under low visibility. The KG nodes a
   - Connected to the `Hazard` node via `Caused_by` edge
 
 - **Action Node**  
-  - "Acceleration"  
+  - `Expression`: "Acceleration"  
   - Linked to the `UnsafeSystemConstraint` node by `Caused_by` edge, with property `types_of_providing = provide`
 
 - **EnvFactor Node**  
-  - "Visibility < 50"  
+  - `Expression`: "Visibility < 50"  
   - Captures environmental conditions affecting system parameters
 
 - **EnvFactorParam Node**  
