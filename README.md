@@ -196,6 +196,7 @@ Consider the scenario of a vehicle speeding under low visibility. The KG nodes a
   - `Value`: 20 km/h  
   - `Result`: "minimum"  
   - Ensures that under multiple environmental factors, the strictest safe bound is applied
+  - Linked to the `EnvFactor` node by `affect` edge
 
 This example shows how a real-world hazard is decomposed into nodes and edges, producing a causal subgraph that connects losses, hazards, unsafe constraints, actions, and environmental factors.
 
