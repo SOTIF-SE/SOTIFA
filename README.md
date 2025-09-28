@@ -170,7 +170,7 @@ Building on the reasoning steps described above, we now show how they can be ins
 
 - **EnvFactorParam Node:** `Expression`: "vmax", `Value`: 20 km/h, `Result`: "minimum", ensuring the strictest safe bound under multiple environmental factors. Linked to the corresponding `EnvFactor` node via an `affect` edge, specifying how low visibility restricts the allowed `vmax`.
 
-Finally, a `Vehicle` node is constructed as the central entity. The previously defined `Loss` nodes are connected to it via `Has` edges, `Action` nodes are connected via `Has` edges, and `EnvFactor` nodes are linked via `In` edges. By centering the `Vehicle` node, the KG enables hierarchical reasoning for SOTIF assessment, starting with its `Loss` nodes and propagating through associated actions and environmental factors.
+Finally, a `Vehicle` node is constructed as the central entity. The previously defined `Loss` nodes are connected to it via `Has` edges, `Action` nodes are connected via `Has` edges, and `EnvFactor` nodes are linked via `In` edges. By centering the `Vehicle` node, the KG enables hierarchical reasoning for SOTIF assessment, beginning with its `Loss` nodes and proceeding through the corresponding unsafe constraints, actions, and environmental factors.
 
 This example demonstrates how a loss is decomposed into hazards, unsafe constraints, actions, and environmental factors, producing a structured causal subgraph that is queryable in the KG.
 
