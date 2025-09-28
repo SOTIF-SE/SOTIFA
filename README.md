@@ -176,7 +176,7 @@ This example demonstrates how a loss is decomposed into hazards, unsafe constrai
 
 ---
 
-#### Tooling and Reproducibility. 
+#### Automation Level, Tooling and Reproducibility. 
 The current KG construction is performed **manually**, but it follows a systematic and well-structured process that enables consistent extension to new scenarios. Users can import our existing knowledge graph (released as `neo4j.dump` on the project website) and adapt it to specific SOTIF analysis needs using official [Neo4j queries](https://neo4j.com/deployment-center/#releases). The `SOTIFA` tool can then parse the KG and complete the subsequent SOTIF assessment. To support reproducibility and collaboration, the entire KG dataset and the associated `SOTIFA` plugin are released on the project website. In future work, we aim to develop tools that automatically instantiate constraints from formal ADS specifications, reducing manual effort and accelerating KG construction.
 
 [Sugiyanto, 2017]: Gito Sugiyanto. The cost of traffic accident and equivalent accident number in developing countries (case study in Indonesia). In: ARPN Journal of Engineering and Applied Sciences, Vol. 12, No. 2, 2017, pp. 389–397.
