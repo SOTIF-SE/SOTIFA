@@ -274,14 +274,11 @@ The SOTIFA scores remain stable under moderate parameter changes, showing robust
 ### 🚀Scalability and Complexity of SOTIFA
 We provide a discussion of scalability, computational performance, and potential strategies for managing complexity in industrial-scale autonomous driving systems.
 
-**Complexity Analysis.**  
+#### Complexity Analysis.
 In our work, SOTIF risks are assessed by evaluating ADS behaviors for **each EUCA** derived from the STPA process. This evaluation requires identifying unsafe control actions, which can be formulated as a *reachability problem* in the system's hybrid state space and addressed via *falsification* techniques. To explore the system's complex hybrid state space, we adopt a divide-and-conquer strategy by first decomposing it into individual **mode sequences** and exploring each sequence separately. For the high-dimensional and nonlinear continuous dynamics within a given mode sequence, we then build upon the *classification-based derivative-free optimization (CDFO)* approach~\cite{yu2016derivative} to efficiently identify potential EUCAs for SOTIF evaluation. CDFO follows an iterative **sampling–evaluation–classification** procedure, where each iteration (or *query*) consists of sampling a candidate solution, evaluating it, and updating the classification model to guide the next optimization iteration. The *query complexity* of CDFO is then defined as the total number of such iterations required to obtain an optimal or approximately optimal solution.  
 
-Therefore, the overall complexity for our SOTIF assessment can be expressed as:
+Therefore, the overall complexity for our SOTIF assessment can be expressed as:$$O \Big(K \cdot (m_{L})^B \cdot Q \cdot (m+C_k+k)\Big)$$
 
-\[
-O \Big(K \cdot (m_{L})^B \cdot Q \cdot (m+C_k+k)\Big).
-\]
 
 Here, \(K\) denotes the number of EUCAs derived from the STPA process. For **each EUCA**, the number of mode sequences to be explored can be bounded by \(O((m_L)^B)\), where \(m_L\) denotes the number of modes in the system model and \(B\) is a constant mode transition bound.  
 Then for **each mode sequence**, the number of optimization iterations required (i.e., query complexity) is \(Q\), with each iteration incurring a cost of \(O(m+C_k+k)\).  
@@ -289,14 +286,14 @@ Specifically, in **each iteration**, the computational complexity of the samplin
 
 Besides, regarding the *query complexity* \(Q\) in Eq.~\eqref{form1}—defined as the upper bound on the number of iterations required to obtain an \(\epsilon\)-approximate optimal solution with probability at least \((1-\delta)\)—we refer to the explicit bound established in \cite{yu2016derivative}. In particular, under the Lipschitz continuity condition with \(\theta_f = \!\Big(\tfrac{1}{\beta_1},\, \beta_2,\, \ln L_1,\, \ln \tfrac{1}{L_2}\Big)\) denoting the relevant Lipschitz parameters, it holds that \(Q=O \Big(\operatorname{poly}\left(\tfrac{1}{\epsilon},\, m,\, \theta_f \right)\cdot \ln \tfrac{1}{\delta}\Big)\), which is polynomial in \(m\).  
 
-**Scalability Limits and Performance Considerations.**  
+#### Scalability Limits and Performance Considerations.  
 According to above analysis, as the system scales, several factors contribute to an increase in computational cost. First, the number of system variables and external inputs, \(m = m_{X} + m_{U}\), generally grows, which increases both the query complexity \(Q\) (polynomially) and the cost of each optimization iteration in Eq.~\eqref{form1}. Second, larger systems typically involve more controllers, resulting in more system modes \(m_L\), and thereby exponentially increasing the number of mode sequences \((m_L)^B\). Lastly, the total number of candidate EUCAs \(K\) may also grow with the system scale due to combinatorial interactions among controllers and environmental factors, further linearly increasing the overall cost.  
 
 To mitigate this complexity growth, `SOTIFA` incorporates several practical strategies. First, combinatorial testing is employed to systematically reduce the number of EUCA combinations, avoiding the need for exhaustive enumeration. Second, domain knowledge encoded in our constructed knowledge graph (Algorithm~1) is leveraged for pruning: for example, the `Caused_by` relation allows us to exclude logically inconsistent pairs such as `not provide acceleration` when the USC is `v > vmax`. Besides, falsification terminates once an unsafe action is detected, avoiding unnecessary simulations and reducing practical computational cost.  
 Together, these mechanisms substantially reduce the number of EUCAs and practical runtime cost. As a result, although the theoretical worst-case complexity grows with the number of EUCAs, system variables, external inputs and modes, our observed runtime remains manageable in practice.  
 
 
-**Modular Analysis and Abstraction.**  
+#### Modular Analysis and Abstraction.
 Evaluating industrial-scale ADSs is challenging because the system model typically involves behaviors of multiple vehicle components and complex controllers, resulting in a large number of variables, control modes and mode transitions, and consequently high computational complexity for SOTIF assessment. In our future work, a potential solution to this challenge is to adopt modular analysis. In our approach, fortunately, each EUCA focuses on the specific subset of the system pertinent to the corresponding unsafe action and its environmental context, which may enable scenario-specific modular analysis and abstraction and potentially facilitate scalable ADS SOTIF assessment.  
 
 For example, in future work, when conducting more detailed analyses of multi-vehicle scenarios, vehicles with little impact on the current EUCA could be pre-analyzed to reduce computational cost, with their behavior abstracted as hyperrectangles or time-varying sets.  
