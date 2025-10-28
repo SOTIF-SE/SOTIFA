@@ -30,10 +30,10 @@ sudo cp -r lib/* /usr/lib/
 
 Navigate to the 'bin' directory within the installation directory of Neo4j.
 ```
-./neo4j-admin database load --from-path=/home/cxy/SOTIFATools neo4j --overwrite-destination=true
+./neo4j-admin database load --from-path=/path/to/SOTIFATools neo4j --overwrite-destination=true
 neo4j start
 ```
-- Replace `/path/to/neo4j` with the actual Neo4j path.
+- Replace `/path/to/SOTIFATools` with the actual SOTIFATools path.
 - Set USER as `neo4j`, PASSWORD as `12345678`.
 
 - **Install the EnvAADL plugin on OSATE2**
