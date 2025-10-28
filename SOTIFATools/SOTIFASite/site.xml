@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/SOTIFAFeature_1.0.0.202501312051.jar" id="SOTIFAFeature" version="1.0.0.202501312051">
+   <feature url="features/SOTIFAFeature_1.0.0.202510281650.jar" id="SOTIFAFeature" version="1.0.0.202510281650">
       <category name="new_category_1"/>
    </feature>
    <category-def name="new_category_1" label="New Category 1"/>
